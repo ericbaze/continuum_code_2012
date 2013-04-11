@@ -1,0 +1,636 @@
+a:8:{i:0;s:35:"X-Powered-By: PHP/5.3.6-13ubuntu3.6";i:1;s:38:"Expires: Thu, 12 Jul 2012 20:57:22 GMT";i:2;s:44:"Last-Modified: Thu, 19 Jul 2012 20:57:22 GMT";i:3;s:51:"Cache-Control: no-cache, must-revalidate, max-age=0";i:4;s:16:"Pragma: no-cache";i:5;s:42:"X-Pingback: http://continuum.io/xmlrpc.php";i:6;s:38:"Content-Type: text/html; charset=UTF-8";i:7;s:48:"Link: <http://continuum.io/?p=82>; rel=shortlink";}<!--headers--><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US"><head profile="http://gmpg.org/afn/11">
+	<meta http-equiv="Content-Type" content="text/html charset==UTF-8" />
+	
+    <title>
+		Counting Words, Part Two | 		Continuum Analytics    </title>
+            <link href="/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="/css/custom.css" rel="stylesheet" type="text/css" />
+		<link href="/css/prettify.css" rel="stylesheet" type="text/css" />
+        <link rel="shortcut icon" href="/img/favicon.ico"/>
+		<link rel="apple-touch-icon" href="/img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png" />	<link rel="pingback" href="http://continuum.io/xmlrpc.php" />
+
+    <style>
+		
+	.content { background-image: none; background-color: #FFFFFF; }
+	.content_center { background-image: none; background-color: #FFFFFF; }
+	.form_standard { background: url(http://staging.continuum.io/img/inner_form_background.png); }
+	.blog_title { margin-bottom: 20px; }
+	.blog_content { margin-bottom: 20px; }
+	p { margin-right: 20px; }
+	
+	#content .entry-title {
+		color: #000;
+		font-size: 21px;
+		font-weight: bold;
+		line-height: 1.3em;
+		margin-bottom: 0;
+	}
+	.entry-title h1 {
+		color: #000;
+		font-size: 21px;
+		font-weight: bold;
+		line-height: 1.3em;
+		margin-bottom: 0;
+	}
+	.entry-title a:link,
+	.entry-title a:visited {
+		color: #000;
+		text-decoration: none;
+	}
+	.entry-title a:active,
+	.entry-title a:hover {
+		color: #ff4b33;
+	}
+	.entry-meta {
+		color: #888;
+		font-size: 12px;
+	}
+	.entry-meta abbr,
+	.entry-utility abbr {
+		border: none;
+	}
+	.entry-meta abbr:hover,
+	.entry-utility abbr:hover {
+		border-bottom: 1px dotted #666;
+	}
+	.entry-content,
+	.entry-summary {
+		clear: both;
+		padding: 12px 0 0 0;
+	}
+	#content .entry-summary p:last-child {
+		margin-bottom: 12px;
+	}
+	.entry-content fieldset {
+		border: 1px solid #e7e7e7;
+		margin: 0 0 24px 0;
+		padding: 24px;
+	}
+	.entry-content fieldset legend {
+		background: #fff;
+		color: #000;
+		font-weight: bold;
+		padding: 0 24px;
+	}
+	.entry-content input {
+		margin: 0 0 24px 0;
+	}
+	.entry-content input.file,
+	.entry-content input.button {
+		margin-right: 24px;
+	}
+	.entry-content label {
+		color: #888;
+		font-size: 12px;
+	}
+	.entry-content select {
+		margin: 0 0 24px 0;
+	}
+	.entry-content sup,
+	.entry-content sub {
+		font-size: 10px;
+	}
+	.entry-content blockquote.left {
+		float: left;
+		margin-left: 0;
+		margin-right: 24px;
+		text-align: right;
+		width: 33%;
+	}
+	.entry-content blockquote.right {
+		float: right;
+		margin-left: 24px;
+		margin-right: 0;
+		text-align: left;
+		width: 33%;
+	}
+	.page-link {
+		clear: both;
+		color: #000;
+		font-weight: bold;
+		margin: 0 0 22px 0;
+		word-spacing: 0.5em;
+	}
+	.page-link a:link,
+	.page-link a:visited {
+		background: #f1f1f1;
+		color: #333;
+		font-weight: normal;
+		padding: 0.5em 0.75em;
+		text-decoration: none;
+	}
+	.home .sticky .page-link a {
+		background: #d9e8f7;
+	}
+	.page-link a:active,
+	.page-link a:hover {
+		color: #ff4b33;
+	}
+	body.page .edit-link {
+		clear: both;
+		display: block;
+	}
+	#entry-author-info {
+		background: #f2f7fc;
+		border-top: 4px solid #000;
+		clear: both;
+		font-size: 14px;
+		line-height: 20px;
+		margin: 24px 0;
+		overflow: hidden;
+		padding: 18px 20px;
+	}
+	#entry-author-info #author-avatar {
+		background: #fff;
+		border: 1px solid #e7e7e7;
+		float: left;
+		height: 60px;
+		margin: 0 -104px 0 0;
+		padding: 11px;
+	}
+	#entry-author-info #author-description {
+		float: left;
+		margin: 0 0 0 104px;
+	}
+	#entry-author-info h2 {
+		color: #000;
+		font-size: 100%;
+		font-weight: bold;
+		margin-bottom: 0;
+	}
+	.entry-utility {
+		clear: both;
+		color: #888;
+		font-size: 12px;
+		line-height: 18px;
+		margin-bottom: 20px;
+	}
+	.entry-meta a,
+	.entry-utility a {
+		color: #888;
+	}
+	.entry-meta a:hover,
+	.entry-utility a:hover {
+		color: #ff4b33;
+	}
+	#content .video-player {
+		padding: 0;
+	}
+
+
+	</style>
+
+</head>
+<body onload="prettyPrint()">
+<!-- header -->
+<header class="header">
+            <section class="header_all"></section>
+            <section class="header_left"></section>
+            <section class="header_right"></section>
+            <section class="container header_center">
+              <h1>Continuum Analytics</h1>
+                <article class="tagline">Python Visualization and Data Exploration</article>
+                <nav class="navbar">
+                    <section class="navbar-inner">
+                        <section class="container">
+                        <ul class="nav">
+							<li class="dropdown"><a href="/index.html" title="Continuum Analytics">Home</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="/products.html">Products&nbsp; <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/python-for-big-data.html" title="Python for Big Data">Python for Big Data</a></li>
+                                    <li><a href="/anaconda.html" title="Anaconda">Anaconda</a></li>
+                                    <!--<li><a href="/blaze.html" title="Blaze">Blaze</a></li>-->
+                                    <!--<li><a href="/excel-plug-in.html" title="Excel Plug-in">Excel Plug-in</a></li>-->
+                                    <li><a href="/downloads.html" title="Downloads">Downloads</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a href="/consulting.html" title="">Consulting</a></li>
+							<li class="dropdown"><a href="/training.html" title="">Training</a></li>
+                            <!--<li class="dropdown">
+                                <a data-target="#" href="/training.html" title="Training" class="dropdown-toggle" data-toggle="dropdown">Training&nbsp; <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/training.html" title="Course Descriptions">Courses</a></li>
+                                    <li><a href="/training.html" title="Course Schedules">Calendar</a></li>
+                                </ul>
+                            </li>-->
+                            <li class="dropdown"><a href="/developer-resources.html">Developers</a></li>
+                          <li class="dropdown"><a data-target="#" href="/company.html" title="Company" class="dropdown-toggle" data-toggle="dropdown">Company&nbsp; <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+									<li><a href="/about-continuum.html" title="About Continuum">About Us</a></li>
+                                    <li><a href="/our-team.html" title="Team">Our Team</a></li>
+                                    <li><a href="/careers.html" title="Careers">Careers</a></li>
+									<li><a href="/blog">Blog</a></li>
+                                    <li><a href="/press" title="Press Releases">Press Releases</a></li>
+                                    <li><a href="http://www.numfocus.org" title="NumFocus" target="_blank">NumFocus</a></li>
+                                </ul>
+						  </li>
+						  <li class="dropdown"><a href="/support.html">Contact Us</a></li>
+                          <li class="dropdown">
+                              <div class="social_media_header">&nbsp;
+                                  <a href="http://plus.google.com/108011804375544975017" title="Circle Continuum Analytics on Google+" target="_blank"><img src="/img/gplus_header.png" alt="Circle Continuum Analytics on Google+" width="33" height="33"></a>
+                                  <a href="http://www.twitter.com/continuumio" title="Follow @continuumio on Twitter" target="_blank"><img src="/img/twitter_header.png" alt="Follow @continuumio on Twitter" width="33" height="33"></a>
+                                  <a href="http://www.linkedin.com/company/continuum-analytics-inc-" title="Follow Continuum Analytics on LinkedIn" target="_blank"><img src="/img/linkedin_header.png" alt="Follow Continuum Analytics on LinkedIn" width="33" height="33"></a>
+                                  <a href="http://www.facebook.com/ContinuumAnalytics" title="Like Continuum Analytics on Facebook" target="_blank"><img src="/img/facebook_header.png" alt="Like Continuum Analytics on Facebook" width="33" height="33"></a>
+                                  <!--<a href="http://www.youtube.com/user/ContinuumIO" title="Check out Continuum's support videos on YouTube" target="_blank"><img src="/img/youtube_header.png" alt="Check out Continuum's support videos on YouTube" width="33" height="33"></a>-->
+                              </div>
+                          </li>
+                        </ul>
+                        </section>
+                  </section>
+              </nav>
+            </section>
+        </header><!-- /header --><section class="content_center">
+    <article class="container">
+        <section class="row blog_content">
+            <section class="span8">            
+                <div id="content" role="main">            
+                
+
+				<!--<div id="nav-above" class="navigation">
+					<div class="nav-previous"><a href="http://continuum.io/blog/counting-words-part-1/" rel="prev"><span class="meta-nav">&larr;</span> Counting Words, Part One</a></div>
+					<div class="nav-next"></div>
+				</div>--><!-- #nav-above -->
+
+				<div id="post-82" class="post-82 post type-post status-publish format-standard hentry category-disco">
+                    <div style="float:left; margin-right: 10px"><!-- avatar -->
+                    <img alt='' src='http://0.gravatar.com/avatar/2851d5d532ab575906b2a1228bc62717?s=32&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />                    </div><!-- close avatar -->
+                    <div><!-- start title -->
+                        <h2>Counting Words, Part Two</h2>
+    
+                        <div class="entry-meta">
+                            <span class="meta-prep meta-prep-author">Posted on</span> <a href="http://continuum.io/blog/counting-words-part-2/" title="10:39 pm" rel="bookmark"><span class="entry-date">July 14, 2012</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://continuum.io/blog/author/benz/" title="View all posts by Benjamin Zaitlen">Benjamin Zaitlen</a></span>                        </div><!-- .entry-meta -->
+                    </div><!-- end title -->
+
+					<div class="entry-content">
+						<p>
+<h3>Sherlock Holmes vs Hercule Poirot</h3>
+<p>How do literary detectives think? Let&#8217;s look at two of the most famous sleuths in literature, Sherlock Holmes and Hercule Poirot. Here&#8217;s Holmes&#8217;s key edict:</p>
+<p>
+<blockquote><em>When you have eliminated the impossible, whatever remains, however improbable, must be the truth.</em></p></blockquote>
+<p>And here is Poirot&#8217;s philosophy:</p>
+<p>
+<blockquote><em>It is the brain, the little gray cells on which one must rely. One must seek the truth within&#8211;not without.</em></p></blockquote>
+<p>With these famous quotes, we can begin to think about &#8220;Detective-ness.&#8221; Poirot and Holmes both possess abilities to solve the most challenging of murder mysteries. How? How does Holmes decide what is impossible vs. improbable? How do Poirot&#8217;s &#8220;little gray cells&#8221; decipher the clues, while for Poirot&#8217;s sidekick Arthur Hastings the clues remain a series of unconnected objects of events? What kinds of questions do these detectives ask? And might their questions give us a clue about the inner workings of the mind of the literary detective?</p>
+<p>Indeed, word counting may provide a good starting point to identify a &#8220;fingerprint&#8221; of &#8220;Detective-ness.&#8221; Again, we return to counting words with Disco&#8217;s MapReduce Framework. But this time we get to play with some new free data sets.</p>
+<p>
+<h3>Free Data Sets</h3>
+<p>Project Gutenberg hosts a collection of over 40,000 free ebooks (~20GB). The collection is searchable and browsable by genre, language, author, etc. The books are free to download in a variety of formats and generally around a few hundred KB. Today, most personal machines ship with 2-4GB of RAM and can be extended to 8GB; it is also not uncommon for personal machines to have 16GB of RAM. For those with large RAM sizes, this particular data set may be able to be digested in memory; however, the data set will grow faster than RAM size will increase, and we will need an out-of-core solution to analyze the data. This data set provides a great training ground for Data Scientists and Explorers, Hackers, Linguists, and those new to the Disco/MapReduce framework. Project Gutenberg is also a wonderful resource and we encourage everyone to pick up an eBook and read.</p>
+<p>
+<h3>References:</h3>
+<ul>
+<li><a href="http://www.gutenberg.org/">Project Gutenberg</a></li>
+</ul>
+<h3>Questions and Early Results:</h3>
+<p>Can we define Holmes and Poirot by looking at the questions in the text? That is, can we classify the person/character based on types of questions they ask? Before classifying, I want to know how many Who, What, Where, When, and Whys are in the text. Additionally, looking at a distribution of modal verbs (verbs which indicate ability, obligation, permission, certainty, probability, possibility) may also give some us insight into these characters.</p>
+<p><br/></p>
+<table class="table table-bordered table-striped">
+<tbody>
+<tr>
+<th>Question</th>
+<th>Count</th>
+</tr>
+<tr>
+<td>what</td>
+<td>271</td>
+</tr>
+<tr>
+<td>when</td>
+<td>266</td>
+</tr>
+<tr>
+<td>who</td>
+<td>257</td>
+</tr>
+<tr>
+<td>where</td>
+<td>103</td>
+</tr>
+<tr>
+<td>how</td>
+<td>100</td>
+</tr>
+<tr>
+<td>why</td>
+<td>39</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<table class="table table-bordered table-striped">
+<tbody>
+<tr>
+<th>Modal Verb</th>
+<th>Count</th>
+</tr>
+<tr>
+<td>could</td>
+<td>282</td>
+</tr>
+<tr>
+<td>will</td>
+<td>263</td>
+</tr>
+<tr>
+<td>may</td>
+<td>204</td>
+</tr>
+<tr>
+<td>can</td>
+<td>173</td>
+</tr>
+<tr>
+<td>must</td>
+<td>170</td>
+</tr>
+<tr>
+<td>shall</td>
+<td>170</td>
+</tr>
+<tr>
+<td>might</td>
+<td>121</td>
+</tr>
+<tr>
+<td>need</td>
+<td>22</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong>What kinds of modal verbs and questions are seen in Agatha Christie&#8217;s Poirot?</strong></p>
+<table class="table table-bordered table-striped">
+<tbody>
+<tr>
+<th>Question</th>
+<th>Count</th>
+</tr>
+<tr>
+<td>what</td>
+<td>171</td>
+</tr>
+<tr>
+<td>who</td>
+<td>121</td>
+</tr>
+<tr>
+<td>when</td>
+<td>85</td>
+</tr>
+<tr>
+<td>how</td>
+<td>59</td>
+</tr>
+<tr>
+<td>where</td>
+<td>48</td>
+</tr>
+<tr>
+<td>why</td>
+<td>29</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<table class="table table-bordered table-striped">
+<tbody>
+<tr>
+<th>Question</th>
+<th>Count</th>
+</tr>
+<tr>
+<td>will</td>
+<td>223</td>
+</tr>
+<tr>
+<td>could</td>
+<td>134</td>
+</tr>
+<tr>
+<td>must</td>
+<td>102</td>
+</tr>
+<tr>
+<td>can</td>
+<td>84</td>
+</tr>
+<tr>
+<td>might</td>
+<td>67</td>
+</tr>
+<tr>
+<td>may</td>
+<td>54</td>
+</tr>
+<tr>
+<td>shall</td>
+<td>31</td>
+</tr>
+<tr>
+<td>need</td>
+<td>20</td>
+</tr>
+</tbody>
+</table>
+<p><strong>How do we load the data from Project Gutenberg into the Disco cluster?</strong></p>
+<p>
+<h3>Input (Streaming)</h3>
+<p>Disco has a few different input data types. Often data is stored off-site from where the computation is being performed; we can stream data directly to DDFS with a regular HTTP address. DDFS, the Disco Distributed File System, is storage system designed by the Disco team to help support Big Data projects. Often, a MapReduce Framework will be associated with an internal filesystem designed for Big Data stores. HDFS (Hadoop Distributed File System) is the data store solution for the Hadoop Framework. Later, we will go into more specifics of DDFS and HDFS; for now, we can think of DDFS and HDFS as filesystems which can scale horizontally (adding more and more nodes) without<br/>much difficulty.</p>
+<p>Again, streaming the data avoids <em>direct</em> interaction with DDFS. We can use one or multiple URLs:</p>
+<pre class="prettyprint lang-py">
+input=["http://www.gutenberg.org/cache/epub/1661/pg1661.txt"], #Adventures of Sherlock Holmes Collected Works<br/>
+input=["http://www.gutenberg.org/cache/epub/2097/pg2097.txt", "http://www.gutenberg.org/cache/epub/244/pg244.txt",], #Study in Scarlet and Sign Of Four
+</pre>
+<p>Remember, the map function is given a line of text and produces an iterable of key-value pairs.</p>
+<pre class="prettyprint lang-py">
+def map(line, params):<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;import string<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for word in line.split():<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;strippedWord = word.translate(string.maketrans("",""), string.punctuation)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yield strippedWord, 1<br/>
+</pre>
+<p>We use Disco&#8217;s default partition function, which buckets keys on hash(str(key) % (number_of_partitions) and the same reduce function:</p>
+<pre class="prettyprint linenums lang-py">
+def reduce(iter, params):<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from disco.util import kvgroup<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for word, counts in kvgroup(sorted(iter)):<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yield word, sum(counts)
+</pre>
+<p>This produces an iterable of (word, counts): [("at", 385), ("ate", 3), ("atmosphere", 4), ("attach", 1)...]</p>
+<p>
+<h3>Output</h3>
+<p>In part 1, the results were printed to the screen. This time let&#8217;s save the results to file so we can do any post processing necessary.</p>
+<pre class="prettyprin linenums lang-py">
+def reduce(iter, params):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from disco.util import kvgroup
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for word, counts in kvgroup(sorted(iter)):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yield word, sum(counts)
+</pre>
+<p><br/></p>
+<p>This produces an iterable of (word, counts): [("at", 385), ("ate", 3), ("atmosphere", 4), ("attach", 1)...]</p>
+<p>
+<h3>Output</h3>
+<p>In part 1, the results were printed to the screen. This time let&#8217;s save the results to file so we can do any post processing necessary.</p>
+<pre class="prettyprint linenums lang-py">
+filePath = '/tmp/' #FILL IN<br/>
+out_numerical = open(filePath+'Words-SortNumerically.txt', 'w')<br/>
+out_abc = open(filePath+'Words-SortAlphabetically.txt', 'w')<br/>
+<br/>
+wordCount = []<br/>
+for word, count in result_iterator(job.wait(show=True)):<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out_abc.write('%s \t %d\n' % (str(word), int(count)) )<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wordCount.append((word,count))<br/>
+<br/>
+#sorted list from an iterable. lambda function returns the count -- position 1 of the tuple we created.<br/>
+sortedWordCount = sorted(wordCount, key=lambda count: count[1],reverse=True)<br/>
+<br/>
+for word, count in sortedWordCount:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out_numerical.write('%s \t %d\n' % (str(word), int(count)) )<br/>
+<br/>
+out_abc.close()<br/>
+out_numerical.close()<br/>
+<br/>
+question_words = ['who', 'where','what', 'when', 'why', 'how']<br/>
+modal_verbs = ['can', 'could', 'need', 'may', 'might', 'must', 'shall', 'will']<br />
+<br/>
+print [i for i in sortedWordCount if i[0] in question_words]<br/>
+print [i for i in sortedWordCount if i[0] in modal_verbs]
+</pre>
+<p>In the code above, we create two files in &#8216;/tmp&#8217; and store lists of words sorted alphabetically (Words-SortAlphabetically.txt) and sorted numerically (Words-SortNumerically.txt).</p>
+<p><h3>Analysis and Thoughts</h3>
+<p>In both Conan Doyle&#8217;s and Christie&#8217;s detective novels, &#8216;What&#8217; is the top &#8216;WH&#8217; question word. This makes a certain amount of sense. Detectives <em>should</em> be more interested in process rather than motivation. To fully make this argument, of course, we would need to look at the distribution of question words over many texts and determine a <em>Control</em> distribution. We leave this an exercise to the readers. <img src='http://continuum.io/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+<p>As for the modal verbs, &#8216;could&#8217; and &#8216;will&#8217; appear almost equally frequently for Conan Doyle, whereas &#8216;will&#8217; is the top modal verb in Christie&#8217;s texts. Typically, &#8216;will&#8217; suggests a focus on certainty; &#8216;could,&#8217; on the other hand, suggests a focus on possibilities. Perhaps Holmes, whose style of sleuthery depends on ruling out the impossible, is more concerned about possibility than Poirot and his little gray cells.</p>
+<p>In doing this kind of analysis, more questions arise &#8212; not just about texts but about the importance of questions in a person&#8217;s public speech.</p>
+<ul>
+<li>Can we classify a person based on their questions?</li>
+<li>What kinds of questions are asked on Facebook?</li>
+<li>What kinds of questions are asked on Twitter?</li>
+<li>What kinds of questions are asked in the Senate?</li>
+<li>Do the Belgians and the English have superior detectives?</li>
+</ul>
+<p><a class="btn btn-primary" href="https://github.com/ContinuumIO/Examples">Download Example Code</a></p>
+											</div><!-- .entry-content -->
+
+
+					<div class="entry-utility">
+						This entry was posted in <a href="http://continuum.io/blog/category/disco/" title="View all posts in Disco" rel="category tag">Disco</a>. Bookmark the <a href="http://continuum.io/blog/counting-words-part-2/" title="Permalink to Counting Words, Part Two" rel="bookmark">permalink</a>.											</div><!-- .entry-utility -->
+				</div><!-- #post-## -->
+
+				<div id="nav-below" class="navigation">
+					<div class="nav-previous" style="float: left;"><a href="http://continuum.io/blog/counting-words-part-1/" rel="prev"><span class="meta-nav">&larr;</span> Counting Words, Part One</a></div>
+					<div class="nav-next" style="float: right;"></div>
+				</div><!-- #nav-below -->
+				<!-- Uncomment to allow comments -->
+				
+                </div><!-- #content -->
+            </section> <!-- span 8 -->
+           	<section class="span4">
+    	<div id="search-3" class="widget widget_search"><form role="search" method="get" id="searchform" action="http://continuum.io/" >
+	<div><label class="screen-reader-text" for="s">Search for:</label>
+	<input type="text" value="" name="s" id="s" />
+	<input type="submit" id="searchsubmit" value="Search" />
+	</div>
+	</form></div>		<div id="recent-posts-3" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+				<li><a href="http://continuum.io/blog/counting-words-part-2/" title="Counting Words, Part Two">Counting Words, Part Two</a></li>
+				<li><a href="http://continuum.io/blog/counting-words-part-1/" title="Counting Words, Part One">Counting Words, Part One</a></li>
+				<li><a href="http://continuum.io/blog/mapreduce/" title="MapReduce and All That Disco/Hadoopla!">MapReduce and All That Disco/Hadoopla!</a></li>
+				</ul>
+		</div><div id="categories-3" class="widget widget_categories"><h3 class="widget-title">Categories</h3>		<ul>
+	<li class="cat-item cat-item-7"><a href="http://continuum.io/blog/category/disco/" title="View all posts filed under Disco">Disco</a>
+</li>
+		</ul>
+</div><div id="archives-3" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<ul>
+			<li><a href='http://continuum.io/blog/2012/07/' title='July 2012'>July 2012</a></li>
+		</ul>
+</div><div id="meta-3" class="widget widget_meta"><h3 class="widget-title">Meta</h3>			<ul>
+						<li><a href="http://continuum.io/wp-login.php">Log in</a></li>
+			<li><a href="http://continuum.io/feed/" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://continuum.io/comments/feed/" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>
+						</ul>
+</div>
+
+
+
+</section><!-- span4 --> 
+        </section><!--/row blog_content-->
+    </article><!--container-->
+</section><!--/container content_center-->
+<!-- footer -->
+	        <footer class="footer">
+			<section class="container footer_center">
+				<section class="row">
+					<article class="span4" style="margin-top: -10px;">
+						<figure style="margin-bottom: -5px;"><a href="http://www.continuum.io" title="Continuum Analytics"><img src="/img/footer_logo.png" alt="Continuum Analytics" width="134" height="64" class="footer_logo"/></a></figure>
+						3801 Capital of Texas Highway South<br/>
+						Suite 250<br/>
+						Austin, TX 78704<br/>
+						<br/>
+						512.222.5440<br/>
+						<a class="footer_links" href="mailto:&#x69;&#x6e;&#102;&#x6f;&#00064;&#x63;&#000111;&#110;&#x74;&#x69;&#x6e;&#x75;&#x75;&#000109;&#x2e;&#105;&#111;">&#x69;&#x6e;&#102;&#x6f;&#00064;&#x63;&#000111;&#110;&#x74;&#x69;&#x6e;&#x75;&#x75;&#000109;&#x2e;&#105;&#111;</a><br/>
+						<section class="footer_social_media">
+                            <a href="http://plus.google.com/108011804375544975017" title="Circle Continuum Analytics on Google+" target="_blank"><img src="/img/gplus_header.png" alt="Circle Continuum Analytics on Google+" width="33" height="33"></a>
+                            <a href="http://www.twitter.com/continuumio" title="Follow @continuumio on Twitter" target="_blank"><img src="/img/twitter_header.png" alt="Follow @continuumio on Twitter" width="33" height="33"></a>
+                            <a href="http://www.linkedin.com/company/continuum-analytics-inc-" title="Follow Continuum Analytics on LinkedIn" target="_blank"><img src="/img/linkedin_header.png" alt="Follow Continuum Analytics on LinkedIn" width="33" height="33"></a>
+                            <a href="http://www.facebook.com/ContinuumAnalytics" title="Like Continuum Analytics on Facebook" target="_blank"><img src="/img/facebook_header.png" alt="Like Continuum Analytics on Facebook" width="33" height="33"></a>
+                            <!--<a href="http://www.youtube.com/user/ContinuumIO" title="Check out Continuum's support videos on YouTube" target="_blank"><img src="/img/youtube_header.png" alt="Check out Continuum's support videos on YouTube" width="33" height="33"></a>-->
+						</section>
+                    </article>
+                    <article class="span2 footer_align_left">
+						<b><a href="/python-for-big-data.html" title="Products" class="footer_links">Products</a></b><br/>
+						<a href="/python-for-big-data.html" title="Python for Big Data" class="footer_links">Python for Big Data</a><br/>
+						<a href="/anaconda.html" title="Anaconda" class="footer_links">Anaconda</a><br/>
+						<!--<a href="/blaze.html" title="Blaze" class="footer_links">Blaze</a><br/>
+						<a href="/excel-plug-in.html" title="Excel Plug-in" class="footer_links">Excel Plug-in</a><br/>-->
+						<a href="/downloads.html" title="Downloads" class="footer_links">Downloads</a><br/>
+						<br/>
+						<b><a href="consulting.html" title="Solutions" class="footer_links">Consulting</a></b><br/>
+						<br/>
+						<b><a href="/training.html" title="Training" class="footer_links">Training</a></b><br/>
+						<!--<a href="/course-descriptions.html" title="Courses" class="footer_links">Courses</a><br/>
+						<a href="/calendar.html" title="Calendar" class="footer_links">Calendar</a><br/>-->
+						<br/>
+						<b><a href="/support.html" title="Support" class="footer_links">Support</a></b><br/>
+					</article>
+                    <article class="span1 footer_align_left">
+						<!--<b><a href="/index.php/blog" title="Expertise" class="footer_links">Expertise</a></b><br/>-->				
+						<b><a href="/developer-resources.html" title="Developer Resources" class="footer_links">Developers</a></b><br/>
+						<br/>
+						<b><a href="/about-continuum.html" title="Company" class="footer_links">Company</a></b><br/>
+						<a href="/our-team.html" title="Our Team" class="footer_links">Our Team</a><br/>
+						<a href="/careers.html" title="Careers" class="footer_links">Careers</a><br/>
+						<a href="/index.php/blog" title="Blog" class="footer_links">Blog</a><br/>
+						<a href="/press/index.php" title="Press Releases" class="footer_links">Press</a><br/>
+						<a href="http://www.numfocus.org" title="NumFocus" class="footer_links">NumFocus</a><br/>
+						<br/>
+						<b><a href="/support.html" title="Contact Us" class="footer_links">Contact</a></b>
+					</article>
+					<article class="span4">
+                    	<section class="footer_twitter"><a href="http://www.twitter.com/continuumio" class="footer_links" target="_blank">Follow us on Twitter!</a></section>
+                   		<section id="jstwitter"></section>
+						<section class="footer_copyright">&copy; 2012 Continuum Analytics</section>
+					</article>
+				</section>
+			</section>
+		</footer>			<script src="/js/jquery.js"></script>
+		<script src="/js/bootstrap.js"></script>
+		<script src="/js/prettify.js"></script>
+        <script src="/js/twitter.js"></script>
+        <script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-27761864-1']);
+		  _gaq.push(['_trackPageview']);
+		
+		  (function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script><!-- /footer -->
+</body>
+</html>
+<!-- This Quick Cache file was built for (  continuum.io/blog/counting-words-part-2/ ) in 0.16759 seconds, on Jul 19th, 2012 at 8:57 pm UTC. -->
+<!-- This Quick Cache file will automatically expire ( and be re-built automatically ) on Jul 19th, 2012 at 9:57 pm UTC -->

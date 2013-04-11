@@ -1,0 +1,63 @@
+a:8:{i:0;s:35:"X-Powered-By: PHP/5.3.6-13ubuntu3.6";i:1;s:38:"Expires: Wed, 18 Jul 2012 15:59:53 GMT";i:2;s:51:"Cache-Control: no-cache, must-revalidate, max-age=0";i:3;s:16:"Pragma: no-cache";i:4;s:42:"X-Pingback: http://continuum.io/xmlrpc.php";i:5;s:44:"Last-Modified: Thu, 19 Jul 2012 20:59:27 GMT";i:6;s:40:"ETag: "f5e53ee54201fe571f04085fbeddab54"";i:7;s:37:"Content-Type: text/xml; charset=UTF-8";}<!--headers--><?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Continuum Analytics</title>
+	<atom:link href="http://continuum.io/feed/" rel="self" type="application/rss+xml" />
+	<link>http://continuum.io</link>
+	<description>Python Data Exploration &#38; Visualization</description>
+	<lastBuildDate>Thu, 19 Jul 2012 20:59:27 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.4.1</generator>
+		<item>
+		<title>Counting Words, Part Two</title>
+		<link>http://continuum.io/blog/counting-words-part-2/</link>
+		<comments>http://continuum.io/blog/counting-words-part-2/#comments</comments>
+		<pubDate>Sat, 14 Jul 2012 22:39:54 +0000</pubDate>
+		<dc:creator>Benjamin Zaitlen</dc:creator>
+				<category><![CDATA[Disco]]></category>
+
+		<guid isPermaLink="false">http://continuum.io/?p=82</guid>
+		<description><![CDATA[Sherlock Holmes vs Hercule Poirot How do literary detectives think? Let&#8217;s look at two of the most famous sleuths in literature, Sherlock Holmes and Hercule Poirot. Here&#8217;s Holmes&#8217;s key edict: When you have eliminated the impossible, whatever remains, however improbable, &#8230; <a href="http://continuum.io/blog/counting-words-part-2/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		<wfw:commentRss>http://continuum.io/blog/counting-words-part-2/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Counting Words, Part One</title>
+		<link>http://continuum.io/blog/counting-words-part-1/</link>
+		<comments>http://continuum.io/blog/counting-words-part-1/#comments</comments>
+		<pubDate>Fri, 13 Jul 2012 21:05:25 +0000</pubDate>
+		<dc:creator>Benjamin Zaitlen</dc:creator>
+				<category><![CDATA[Disco]]></category>
+
+		<guid isPermaLink="false">http://continuum.io/?p=46</guid>
+		<description><![CDATA[Counting Words: The &#8220;Hello World&#8221; of MapReduce In the original Willy Wonka film, if you recall, Charlie attends a chemistry class taught by Mr. Turkentine. Mr. Turkentine asks Charlie what the result would be from a complicated mix of chemicals. &#8230; <a href="http://continuum.io/blog/counting-words-part-1/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		<wfw:commentRss>http://continuum.io/blog/counting-words-part-1/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>MapReduce and All That Disco/Hadoopla!</title>
+		<link>http://continuum.io/blog/mapreduce/</link>
+		<comments>http://continuum.io/blog/mapreduce/#comments</comments>
+		<pubDate>Fri, 13 Jul 2012 19:33:16 +0000</pubDate>
+		<dc:creator>Benjamin Zaitlen</dc:creator>
+				<category><![CDATA[Disco]]></category>
+
+		<guid isPermaLink="false">http://continuum.io/?p=31</guid>
+		<description><![CDATA[1:50 scale model of the ATLAS detector × 1:50 scale model of the Atlas detector In the winter of 2011 Sascha Mehlhase completed construction on a 1:50 scale model of the ATLAS detector. Over 48 hours, Sascha painstakingly designed a &#8230; <a href="http://continuum.io/blog/mapreduce/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		<wfw:commentRss>http://continuum.io/blog/mapreduce/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>
+<!-- This Quick Cache file was built for (  continuum.io/feed/ ) in 0.21172 seconds, on Jul 25th, 2012 at 3:59 pm UTC. -->
+<!-- This Quick Cache file will automatically expire ( and be re-built automatically ) on Jul 25th, 2012 at 4:59 pm UTC -->

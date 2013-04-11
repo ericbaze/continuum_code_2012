@@ -1,0 +1,376 @@
+a:7:{i:0;s:35:"X-Powered-By: PHP/5.3.6-13ubuntu3.6";i:1;s:42:"X-Pingback: http://continuum.io/xmlrpc.php";i:2;s:38:"Expires: Wed, 11 Jan 1984 05:00:00 GMT";i:3;s:44:"Last-Modified: Thu, 19 Jul 2012 21:17:20 GMT";i:4;s:51:"Cache-Control: no-cache, must-revalidate, max-age=0";i:5;s:16:"Pragma: no-cache";i:6;s:38:"Content-Type: text/html; charset=UTF-8";}<!--headers--><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US"><head profile="http://gmpg.org/afn/11">
+	<meta http-equiv="Content-Type" content="text/html charset==UTF-8" />
+	
+    <title>
+		Page not found | 		Continuum Analytics    </title>
+            <link href="/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="/css/custom.css" rel="stylesheet" type="text/css" />
+		<link href="/css/prettify.css" rel="stylesheet" type="text/css" />
+        <link rel="shortcut icon" href="/img/favicon.ico"/>
+		<link rel="apple-touch-icon" href="/img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png" />	<link rel="pingback" href="http://continuum.io/xmlrpc.php" />
+
+    <style>
+		
+	.content { background-image: none; background-color: #FFFFFF; }
+	.content_center { background-image: none; background-color: #FFFFFF; }
+	.form_standard { background: url(http://staging.continuum.io/img/inner_form_background.png); }
+	.blog_title { margin-bottom: 20px; }
+	.blog_content { margin-bottom: 20px; }
+	p { margin-right: 20px; }
+	
+	#content .entry-title {
+		color: #000;
+		font-size: 21px;
+		font-weight: bold;
+		line-height: 1.3em;
+		margin-bottom: 0;
+	}
+	.entry-title h1 {
+		color: #000;
+		font-size: 21px;
+		font-weight: bold;
+		line-height: 1.3em;
+		margin-bottom: 0;
+	}
+	.entry-title a:link,
+	.entry-title a:visited {
+		color: #000;
+		text-decoration: none;
+	}
+	.entry-title a:active,
+	.entry-title a:hover {
+		color: #ff4b33;
+	}
+	.entry-meta {
+		color: #888;
+		font-size: 12px;
+	}
+	.entry-meta abbr,
+	.entry-utility abbr {
+		border: none;
+	}
+	.entry-meta abbr:hover,
+	.entry-utility abbr:hover {
+		border-bottom: 1px dotted #666;
+	}
+	.entry-content,
+	.entry-summary {
+		clear: both;
+		padding: 12px 0 0 0;
+	}
+	#content .entry-summary p:last-child {
+		margin-bottom: 12px;
+	}
+	.entry-content fieldset {
+		border: 1px solid #e7e7e7;
+		margin: 0 0 24px 0;
+		padding: 24px;
+	}
+	.entry-content fieldset legend {
+		background: #fff;
+		color: #000;
+		font-weight: bold;
+		padding: 0 24px;
+	}
+	.entry-content input {
+		margin: 0 0 24px 0;
+	}
+	.entry-content input.file,
+	.entry-content input.button {
+		margin-right: 24px;
+	}
+	.entry-content label {
+		color: #888;
+		font-size: 12px;
+	}
+	.entry-content select {
+		margin: 0 0 24px 0;
+	}
+	.entry-content sup,
+	.entry-content sub {
+		font-size: 10px;
+	}
+	.entry-content blockquote.left {
+		float: left;
+		margin-left: 0;
+		margin-right: 24px;
+		text-align: right;
+		width: 33%;
+	}
+	.entry-content blockquote.right {
+		float: right;
+		margin-left: 24px;
+		margin-right: 0;
+		text-align: left;
+		width: 33%;
+	}
+	.page-link {
+		clear: both;
+		color: #000;
+		font-weight: bold;
+		margin: 0 0 22px 0;
+		word-spacing: 0.5em;
+	}
+	.page-link a:link,
+	.page-link a:visited {
+		background: #f1f1f1;
+		color: #333;
+		font-weight: normal;
+		padding: 0.5em 0.75em;
+		text-decoration: none;
+	}
+	.home .sticky .page-link a {
+		background: #d9e8f7;
+	}
+	.page-link a:active,
+	.page-link a:hover {
+		color: #ff4b33;
+	}
+	body.page .edit-link {
+		clear: both;
+		display: block;
+	}
+	#entry-author-info {
+		background: #f2f7fc;
+		border-top: 4px solid #000;
+		clear: both;
+		font-size: 14px;
+		line-height: 20px;
+		margin: 24px 0;
+		overflow: hidden;
+		padding: 18px 20px;
+	}
+	#entry-author-info #author-avatar {
+		background: #fff;
+		border: 1px solid #e7e7e7;
+		float: left;
+		height: 60px;
+		margin: 0 -104px 0 0;
+		padding: 11px;
+	}
+	#entry-author-info #author-description {
+		float: left;
+		margin: 0 0 0 104px;
+	}
+	#entry-author-info h2 {
+		color: #000;
+		font-size: 100%;
+		font-weight: bold;
+		margin-bottom: 0;
+	}
+	.entry-utility {
+		clear: both;
+		color: #888;
+		font-size: 12px;
+		line-height: 18px;
+		margin-bottom: 20px;
+	}
+	.entry-meta a,
+	.entry-utility a {
+		color: #888;
+	}
+	.entry-meta a:hover,
+	.entry-utility a:hover {
+		color: #ff4b33;
+	}
+	#content .video-player {
+		padding: 0;
+	}
+
+
+	</style>
+
+</head>
+<body onload="prettyPrint()">
+<!-- header -->
+<header class="header">
+            <section class="header_all"></section>
+            <section class="header_left"></section>
+            <section class="header_right"></section>
+            <section class="container header_center">
+              <h1>Continuum Analytics</h1>
+                <article class="tagline">Python Visualization and Data Exploration</article>
+                <nav class="navbar">
+                    <section class="navbar-inner">
+                        <section class="container">
+                        <ul class="nav">
+							<li class="dropdown"><a href="/index.html" title="Continuum Analytics">Home</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="/products.html">Products&nbsp; <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/python-for-big-data.html" title="Python for Big Data">Python for Big Data</a></li>
+                                    <li><a href="/anaconda.html" title="Anaconda">Anaconda</a></li>
+                                    <!--<li><a href="/blaze.html" title="Blaze">Blaze</a></li>-->
+                                    <!--<li><a href="/excel-plug-in.html" title="Excel Plug-in">Excel Plug-in</a></li>-->
+                                    <li><a href="/downloads.html" title="Downloads">Downloads</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a href="/consulting.html" title="">Consulting</a></li>
+							<li class="dropdown"><a href="/training.html" title="">Training</a></li>
+                            <!--<li class="dropdown">
+                                <a data-target="#" href="/training.html" title="Training" class="dropdown-toggle" data-toggle="dropdown">Training&nbsp; <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/training.html" title="Course Descriptions">Courses</a></li>
+                                    <li><a href="/training.html" title="Course Schedules">Calendar</a></li>
+                                </ul>
+                            </li>-->
+                            <li class="dropdown"><a href="/developer-resources.html">Developers</a></li>
+                          <li class="dropdown"><a data-target="#" href="/company.html" title="Company" class="dropdown-toggle" data-toggle="dropdown">Company&nbsp; <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+									<li><a href="/about-continuum.html" title="About Continuum">About Us</a></li>
+                                    <li><a href="/our-team.html" title="Team">Our Team</a></li>
+                                    <li><a href="/careers.html" title="Careers">Careers</a></li>
+									<li><a href="/blog">Blog</a></li>
+                                    <li><a href="/press" title="Press Releases">Press Releases</a></li>
+                                    <li><a href="http://www.numfocus.org" title="NumFocus" target="_blank">NumFocus</a></li>
+                                </ul>
+						  </li>
+						  <li class="dropdown"><a href="/support.html">Contact Us</a></li>
+                          <li class="dropdown">
+                              <div class="social_media_header">&nbsp;
+                                  <a href="http://plus.google.com/108011804375544975017" title="Circle Continuum Analytics on Google+" target="_blank"><img src="/img/gplus_header.png" alt="Circle Continuum Analytics on Google+" width="33" height="33"></a>
+                                  <a href="http://www.twitter.com/continuumio" title="Follow @continuumio on Twitter" target="_blank"><img src="/img/twitter_header.png" alt="Follow @continuumio on Twitter" width="33" height="33"></a>
+                                  <a href="http://www.linkedin.com/company/continuum-analytics-inc-" title="Follow Continuum Analytics on LinkedIn" target="_blank"><img src="/img/linkedin_header.png" alt="Follow Continuum Analytics on LinkedIn" width="33" height="33"></a>
+                                  <a href="http://www.facebook.com/ContinuumAnalytics" title="Like Continuum Analytics on Facebook" target="_blank"><img src="/img/facebook_header.png" alt="Like Continuum Analytics on Facebook" width="33" height="33"></a>
+                                  <!--<a href="http://www.youtube.com/user/ContinuumIO" title="Check out Continuum's support videos on YouTube" target="_blank"><img src="/img/youtube_header.png" alt="Check out Continuum's support videos on YouTube" width="33" height="33"></a>-->
+                              </div>
+                          </li>
+                        </ul>
+                        </section>
+                  </section>
+              </nav>
+            </section>
+        </header><!-- /header -->
+<section class="content_center">
+    <article class="container">
+        <section class="row blog_content">
+            <section class="span8">
+                <div id="content" role="main">
+                    <div id="post-0" class="post error404 not-found">
+                        <h2>Not Found</h2>
+                        <div class="entry-content">
+                            <p>Apologies, but the page you requested could not be found. Perhaps searching will help.</p>
+                            <form role="search" method="get" id="searchform" action="http://continuum.io/" >
+	<div><label class="screen-reader-text" for="s">Search for:</label>
+	<input type="text" value="" name="s" id="s" />
+	<input type="submit" id="searchsubmit" value="Search" />
+	</div>
+	</form>                        </div><!-- .entry-content -->
+                    </div><!-- #post-0 -->
+                </div><!-- #content -->
+            </section> <!-- span 8 -->
+			<section class="span4">
+    	<div id="search-3" class="widget widget_search"><form role="search" method="get" id="searchform" action="http://continuum.io/" >
+	<div><label class="screen-reader-text" for="s">Search for:</label>
+	<input type="text" value="" name="s" id="s" />
+	<input type="submit" id="searchsubmit" value="Search" />
+	</div>
+	</form></div>		<div id="recent-posts-3" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+				<li><a href="http://continuum.io/blog/counting-words-part-2/" title="Counting Words, Part Two">Counting Words, Part Two</a></li>
+				<li><a href="http://continuum.io/blog/counting-words-part-1/" title="Counting Words, Part One">Counting Words, Part One</a></li>
+				<li><a href="http://continuum.io/blog/mapreduce/" title="MapReduce and All That Disco/Hadoopla!">MapReduce and All That Disco/Hadoopla!</a></li>
+				</ul>
+		</div><div id="categories-3" class="widget widget_categories"><h3 class="widget-title">Categories</h3>		<ul>
+	<li class="cat-item cat-item-7"><a href="http://continuum.io/blog/category/disco/" title="View all posts filed under Disco">Disco</a>
+</li>
+		</ul>
+</div><div id="archives-3" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<ul>
+			<li><a href='http://continuum.io/blog/2012/07/' title='July 2012'>July 2012</a></li>
+		</ul>
+</div><div id="meta-3" class="widget widget_meta"><h3 class="widget-title">Meta</h3>			<ul>
+						<li><a href="http://continuum.io/wp-login.php">Log in</a></li>
+			<li><a href="http://continuum.io/feed/" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://continuum.io/comments/feed/" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>
+						</ul>
+</div>
+
+
+
+</section><!-- span4 -->        </section><!--/row blog_content-->
+    </article><!--container-->
+</section><!--/container content_center-->
+
+<script type="text/javascript">
+	// focus on search field after it has loaded
+	document.getElementById('s') && document.getElementById('s').focus();
+</script>
+
+<!-- footer -->
+	        <footer class="footer">
+			<section class="container footer_center">
+				<section class="row">
+					<article class="span4" style="margin-top: -10px;">
+						<figure style="margin-bottom: -5px;"><a href="http://www.continuum.io" title="Continuum Analytics"><img src="/img/footer_logo.png" alt="Continuum Analytics" width="134" height="64" class="footer_logo"/></a></figure>
+						3801 Capital of Texas Highway South<br/>
+						Suite 250<br/>
+						Austin, TX 78704<br/>
+						<br/>
+						512.222.5440<br/>
+						<a class="footer_links" href="mailto:&#x69;&#x6e;&#102;&#x6f;&#00064;&#x63;&#000111;&#110;&#x74;&#x69;&#x6e;&#x75;&#x75;&#000109;&#x2e;&#105;&#111;">&#x69;&#x6e;&#102;&#x6f;&#00064;&#x63;&#000111;&#110;&#x74;&#x69;&#x6e;&#x75;&#x75;&#000109;&#x2e;&#105;&#111;</a><br/>
+						<section class="footer_social_media">
+                            <a href="http://plus.google.com/108011804375544975017" title="Circle Continuum Analytics on Google+" target="_blank"><img src="/img/gplus_header.png" alt="Circle Continuum Analytics on Google+" width="33" height="33"></a>
+                            <a href="http://www.twitter.com/continuumio" title="Follow @continuumio on Twitter" target="_blank"><img src="/img/twitter_header.png" alt="Follow @continuumio on Twitter" width="33" height="33"></a>
+                            <a href="http://www.linkedin.com/company/continuum-analytics-inc-" title="Follow Continuum Analytics on LinkedIn" target="_blank"><img src="/img/linkedin_header.png" alt="Follow Continuum Analytics on LinkedIn" width="33" height="33"></a>
+                            <a href="http://www.facebook.com/ContinuumAnalytics" title="Like Continuum Analytics on Facebook" target="_blank"><img src="/img/facebook_header.png" alt="Like Continuum Analytics on Facebook" width="33" height="33"></a>
+                            <!--<a href="http://www.youtube.com/user/ContinuumIO" title="Check out Continuum's support videos on YouTube" target="_blank"><img src="/img/youtube_header.png" alt="Check out Continuum's support videos on YouTube" width="33" height="33"></a>-->
+						</section>
+                    </article>
+                    <article class="span2 footer_align_left">
+						<b><a href="/python-for-big-data.html" title="Products" class="footer_links">Products</a></b><br/>
+						<a href="/python-for-big-data.html" title="Python for Big Data" class="footer_links">Python for Big Data</a><br/>
+						<a href="/anaconda.html" title="Anaconda" class="footer_links">Anaconda</a><br/>
+						<!--<a href="/blaze.html" title="Blaze" class="footer_links">Blaze</a><br/>
+						<a href="/excel-plug-in.html" title="Excel Plug-in" class="footer_links">Excel Plug-in</a><br/>-->
+						<a href="/downloads.html" title="Downloads" class="footer_links">Downloads</a><br/>
+						<br/>
+						<b><a href="consulting.html" title="Solutions" class="footer_links">Consulting</a></b><br/>
+						<br/>
+						<b><a href="/training.html" title="Training" class="footer_links">Training</a></b><br/>
+						<!--<a href="/course-descriptions.html" title="Courses" class="footer_links">Courses</a><br/>
+						<a href="/calendar.html" title="Calendar" class="footer_links">Calendar</a><br/>-->
+						<br/>
+						<b><a href="/support.html" title="Support" class="footer_links">Support</a></b><br/>
+					</article>
+                    <article class="span1 footer_align_left">
+						<!--<b><a href="/index.php/blog" title="Expertise" class="footer_links">Expertise</a></b><br/>-->				
+						<b><a href="/developer-resources.html" title="Developer Resources" class="footer_links">Developers</a></b><br/>
+						<br/>
+						<b><a href="/about-continuum.html" title="Company" class="footer_links">Company</a></b><br/>
+						<a href="/our-team.html" title="Our Team" class="footer_links">Our Team</a><br/>
+						<a href="/careers.html" title="Careers" class="footer_links">Careers</a><br/>
+						<a href="/index.php/blog" title="Blog" class="footer_links">Blog</a><br/>
+						<a href="/press/index.php" title="Press Releases" class="footer_links">Press</a><br/>
+						<a href="http://www.numfocus.org" title="NumFocus" class="footer_links">NumFocus</a><br/>
+						<br/>
+						<b><a href="/support.html" title="Contact Us" class="footer_links">Contact</a></b>
+					</article>
+					<article class="span4">
+                    	<section class="footer_twitter"><a href="http://www.twitter.com/continuumio" class="footer_links" target="_blank">Follow us on Twitter!</a></section>
+                   		<section id="jstwitter"></section>
+						<section class="footer_copyright">&copy; 2012 Continuum Analytics</section>
+					</article>
+				</section>
+			</section>
+		</footer>			<script src="/js/jquery.js"></script>
+		<script src="/js/bootstrap.js"></script>
+		<script src="/js/prettify.js"></script>
+        <script src="/js/twitter.js"></script>
+        <script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-27761864-1']);
+		  _gaq.push(['_trackPageview']);
+		
+		  (function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script><!-- /footer -->
+</body>
+</html>
+<!-- This Quick Cache file was built for (  continuum.io/developer-resources ) in 0.16223 seconds, on Jul 19th, 2012 at 9:17 pm UTC. -->
+<!-- This Quick Cache file will automatically expire ( and be re-built automatically ) on Jul 19th, 2012 at 10:17 pm UTC -->

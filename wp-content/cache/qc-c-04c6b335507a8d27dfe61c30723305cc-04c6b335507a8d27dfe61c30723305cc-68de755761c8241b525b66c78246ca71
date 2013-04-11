@@ -1,0 +1,69 @@
+a:8:{i:0;s:35:"X-Powered-By: PHP/5.3.6-13ubuntu3.6";i:1;s:38:"Expires: Wed, 18 Jul 2012 09:23:17 GMT";i:2;s:51:"Cache-Control: no-cache, must-revalidate, max-age=0";i:3;s:16:"Pragma: no-cache";i:4;s:48:"X-Pingback: http://continuum.io/press/xmlrpc.php";i:5;s:44:"Last-Modified: Mon, 23 Jul 2012 15:25:11 GMT";i:6;s:40:"ETag: "48e7f189d8f4e22f48644bdf0c9246b2"";i:7;s:37:"Content-Type: text/xml; charset=UTF-8";}<!--headers--><?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Continuum Press Releases</title>
+	<atom:link href="http://continuum.io/press/feed/" rel="self" type="application/rss+xml" />
+	<link>http://continuum.io/press</link>
+	<description>Just another Continuum Analytics Sites site</description>
+	<lastBuildDate>Mon, 23 Jul 2012 15:25:11 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.4.1</generator>
+		<item>
+		<title>Managing, Analyzing, and Accessing Large Data Sets Just Became Quicker and Easier</title>
+		<link>http://continuum.io/press/introducing-anaconda/</link>
+		<comments>http://continuum.io/press/introducing-anaconda/#comments</comments>
+		<pubDate>Mon, 23 Jul 2012 14:34:39 +0000</pubDate>
+		<dc:creator>Matt Harward</dc:creator>
+				<category><![CDATA[Products]]></category>
+
+		<guid isPermaLink="false">http://continuum.io/press/?p=20</guid>
+		<description><![CDATA[Continuum’s revolution to change how the world analyzes data begins with the release of Anaconda. Austin, Texas &#8211; Continuum Analytics, Inc. is proud to announce Anaconda, a scalable distributed data analysis runtime for Python. Anaconda gives analysts and data scientists &#8230; <a href="http://continuum.io/press/introducing-anaconda/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+			<content:encoded><![CDATA[<p><strong>Continuum’s revolution to change how the world analyzes data begins with the release<br/> of Anaconda.</strong></p>
+<p>Austin, Texas &#8211; Continuum Analytics, Inc. is proud to announce Anaconda, a scalable distributed data analysis runtime for Python.  Anaconda gives analysts and data scientists a tested and supported platform for their computational needs by combining the familiar and popular tools available in Python with additional tools for parallel and distributed computation, including MapReduce, interactive parallelism, and MPI.  </p>
+<p>“We are looking to help people take advantage of the power and flexibility of Python, Numpy, SciPy and related tools, but on a much larger scale”, said Travis Oliphant, CEO.</p>
+<p>Peter Wang, President of Continuum, said, “We recognized the increasing popularity of Python and its scientific stack as a data analysis tool, and built Anaconda to provide a tested, supported platform for anyone processing large data sets.”</p>
+<p>The current release, a public beta version of Anaconda Community Edition, is compatible with the most popular flavors of Linux, as well as VMware and Amazon’s EC2 compute cloud.  Anaconda 1.0, available later this summer, will be offered as both Community and Professional Editions, with the latter offering enterprise support and additional features.</p>
+<p>Continuum Analytics provides software tools, training, and integration/consulting services to corporate, government, and educational clients worldwide.  Areas of expertise include geophysics, finance, business and marketing analytics, and the emerging field of data science. </p>
+<p>To download Anaconda or for more information, visit <a href="http://continuum.io/anaconda" title="Download Anaconda">http://continuum.io/anaconda</a>.</p>
+<p>###</p>
+<p>Editor’s note: For interviews, photo opportunities and media support, please contact Matt Harward, Sales Director, at (512) 222-5440.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://continuum.io/press/introducing-anaconda/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Continuum Partners with Beazley</title>
+		<link>http://continuum.io/press/continuum-partners-with-beazley/</link>
+		<comments>http://continuum.io/press/continuum-partners-with-beazley/#comments</comments>
+		<pubDate>Tue, 10 Jul 2012 20:21:16 +0000</pubDate>
+		<dc:creator>Matt Harward</dc:creator>
+				<category><![CDATA[Training]]></category>
+
+		<guid isPermaLink="false">http://continuum.io/press/?p=13</guid>
+		<description><![CDATA[Continuum Analytics, Inc. and Dabeaz LLC announce their partnership in offering Dave Beazley’s popular Python training courses to organizations and individuals world wide. Travis Oliphant, founder and CEO of Continuum Analytics, commented, “We are thrilled to be partnering with such &#8230; <a href="http://continuum.io/press/continuum-partners-with-beazley/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+			<content:encoded><![CDATA[<p>Continuum Analytics, Inc. and Dabeaz LLC announce their partnership in offering Dave Beazley’s popular Python training courses to organizations and individuals world wide.</p>
+<p>Travis Oliphant, founder and CEO of Continuum Analytics, commented, “We are thrilled to be partnering with such an accomplished trainer and contributor to offer hands-on, real world training in the Python space.”</p>
+<p>Beazley has developed his Practical Python Programming course over hundreds of hours. This well established course has been taught internationally over 150 times to thousands of students.</p>
+<p>David Beazley stated, “Our partnership with Continuum Analytics will allow us to respond to the increasing demand for our most popular course taught by some of the most respected members of the Python community. Students will get the best curriculum delivered by the best trainers.”</p>
+<p>To <a href="/calendar.html" title="Training Calendar">schedule a training session</a>, or for additional information, contact Continuum at: <a href="mailto:training@continuum.io">training@continuum.io</a>.</p>
+<p>###</p>
+<p>Editor’s note: For interviews, photo opportunities and media support, please contact Matt Harward, Sales Director, at (512) 222-5440.</p>
+<p><a href="/training.html" title="Training">Learn more about Continuum&#8217;s training offerings.</a></p>
+]]></content:encoded>
+			<wfw:commentRss>http://continuum.io/press/continuum-partners-with-beazley/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>
+<!-- This Quick Cache file was built for (  continuum.io/press/feed/ ) in 0.17260 seconds, on Jul 25th, 2012 at 9:23 am UTC. -->
+<!-- This Quick Cache file will automatically expire ( and be re-built automatically ) on Jul 25th, 2012 at 10:23 am UTC -->

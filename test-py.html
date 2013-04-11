@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Download Anaconda - Continuum Analytics</title>
+        <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+		<!--#include file="head.inc" -->
+        <style>
+			.content, .content_center { background-image: none; background-color: #FFFFFF; }
+			.form_standard { background: url(img/inner_form_background.png); }
+			.blog_title { margin-bottom: 20px; }
+			.blog_content { margin-bottom: 20px; }
+			p { margin-right: 20px; }
+		</style>
+	</head>
+	<body onload="prettyPrint()">
+		<!--#include file="header.inc" -->
+        <section class="content">
+            <section class="container content_center">
+                <article class="container">
+                    <section class="row blog_content">
+                    	<section class="span8">
+                       	  <h2 class="blog_title">Downloads</h2> 
+                          	<pre class="prettyprint lang-py" style="white-space:nowrap; overflow:visible;">
+def map(line, params):<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;import string<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for word in line.split():<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;strippedWord = word.translate(string.maketrans("",""), string.punctuation)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yield strippedWord, 1<br/>
+							</pre>
+                        </section>
+                    </section>
+                </article>
+            </section>
+        </section>
+		<!--#include file="footer.inc" -->
+		<script src="/js/jquery.js"></script>
+		<script src="/js/bootstrap.js"></script>
+		<script src="/js/prettify.js"></script>
+        <script src="/js/twitter.js"></script>
+        <script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-27761864-1']);
+		  _gaq.push(['_trackPageview']);
+		
+		  (function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
+	</body>
+</html>

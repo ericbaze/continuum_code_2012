@@ -1,0 +1,12 @@
+<uwsgi>
+    <uid>www-data</uid>
+    <gid>www-data</gid>
+    <plugin>python</plugin>
+    <socket>/www/pydata/moin/moin.sock</socket>
+    <wsgi-file>/www/moin/wiki/moin.wsgi</wsgi-file>
+    <limit-as>256</limit-as>
+    <processes>8</processes>
+    <memory-report/>
+    <vhost/>
+    <no-site/>
+</uwsgi>

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block script %}
+<script type="text/javascript" src="{{STATIC_URL}}js/shop.js"></script>
+{% endblock %}
+
+{% block content %}
+<section class="container">
+  <div class="row maincart">
+    <div class="span4 carttab">
+      <form method="POST" action="/cshop/viewcart">
+	{% csrf_token %}
+	<ul class="cartlist">
+	  {% for lineitem in lineitems %}
+	  <li class="cartitem">
+	    <div class="cartitemname">
+	      name : {{ lineitem.productconfig.product.name }}
+	    </div>
+	    <div class="cartitemconfig">	
+	      {{ lineitem.productconfig.display_string }}
+	    </div>
+	    <label>quantity </label>
+	    <input name="lineitemqty:{{lineitem.id}}" type="text" value="{{ lineitem.quantity }}"/>
+	    <div class="cartitemcost">
+	      cost : {{ lineitem.cost }}
+	    </div>
+	  </li>
+	  {% endfor %}
+	</ul>
+	<div class="cartitemtotal">
+	  total : {{ order.total_cost|stringformat:".2f" }}
+	</div>
+	<input type="submit" value="update quantities"/>
+      </form>
+      <form method="GET" action="/cshop/begincheckout">
+	<input type="submit" value="checkout"/>	
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock %}

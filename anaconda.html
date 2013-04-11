@@ -1,0 +1,230 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Anaconda Community Edition v0.9 - Continuum Analytics</title>
+        <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+		<!--#include file="head.inc" -->
+        <style>
+			.content, .content_center { background-image: none; background-color: #FFFFFF; }
+			.form_standard { background: url(img/inner_form_background.png); }
+			.blog_title { margin-bottom: 20px; }
+			.blog_content { margin-bottom: 20px; }
+			p { margin-right: 20px; }
+		</style>
+        <script type="text/javascript">
+		function PrintContent()
+			{
+			var DocumentContainer = document.getElementById('packages');
+			var WindowObject = window.open("", "PrintWindow",
+			"width=750,height=650,top=50,left=50,toolbars=no,scrollbars=yes,status=no,resizable=yes");
+			WindowObject.document.writeln(DocumentContainer.innerHTML);
+			WindowObject.document.close();
+			WindowObject.focus();
+			WindowObject.print();
+			WindowObject.close();
+			}
+		</script>
+	</head>
+	<body>
+		<!--#include file="header.inc" -->
+        <section class="content">
+            <section class="container content_center">
+                <article class="container">
+                    <section class="row blog_content">
+                    	<section class="span8">
+                        	<h2 class="blog_title">Anaconda Community Edition v.0.9</h2>
+                            <h3>Easy, Scalable Distributed Data Analysis in Python</h3>
+							<p>Anaconda is a distribution that combines the most popular Python packages for data analysis, statistics, and machine learning.  It has several tools for a variety of types of cluster computations, including MapReduce batch jobs, interactive parallelism, and MPI.  All of the packages in Anaconda are built, tested, and supported by Continuum Analytics. Having a unified runtime for distributed data analysis makes it easier for the broader Python analytics community to share code, examples, and best practices -- without getting tangled in a mess of version numbers and dependencies.</p><br/>
+							<b><a class="btn btn-danger btn-large" href="/downloads.html" title="Download Anaconda" >Download Anaconda Now!</a></b><br/><br/>
+                            <h3>What's Included</h3>
+                            <b>Anaconda v.0.9  is built on Python 2.7.3.</b>
+                        <p><em>Note: Anaconda 1.0 will feature not only popular, commonly-used open-source packages, but will also include additional libraries from Continuum for fast data access to SQL and NoSQL databases, conventional textfile formats, remote &amp; distributed array processing, and data visualization.</em></p>
+                            <table class="table table-bordered table-striped">
+                                <tr>
+                                    <th colspan="3">Data Management</th>
+                                </tr>
+                                <tr><td colspan="3">
+                                        <ul>
+                                            <li>NumPy - Fast array &amp; tabular data access library</li>
+                                            <li>Pandas - Statistics-oriented data structures, like R's DataFrame</li>
+                                            <li>PyTables - Tabular access to HDF5 files</li>
+                                            <li>h5py - Pythonic, low-level access to HDF5 files</li>
+                                            <li>PySAM - access to SAM/BAM genome sequence data files</li>
+                                        </ul>
+                                    </td>
+								</tr>
+                                <tr>
+									<th colspan="3">Distributed Computing</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <ul>
+                                            <li>Disco - An Erlang/Python implementation of MapReduce</li>
+                                            <li>IPython - interactive parallel Python interpreter kernels</li>
+                                            <li>MPI4py - Implementation of MPI ptp and collective operations</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Algorithms, Statistics, Machine Learning</th>
+                                    <th>Image Processing</th>
+                                    <th>Performance</th>
+                                </tr>
+                                <tr>
+                                  	<td>
+                                        <ul>
+                                            <li>SciPy</li>
+                                            <li>SymPy</li>
+                                            <li>SciKits Learn</li>
+                                            <li>SciKits Statsmodels</li>
+                                            <li>Theano</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>OpenCV</li>
+                                            <li>PIL</li>
+                                            <li>SciKits Image</li>    
+                                        </ul>
+                                    </td>
+
+                                    <td>
+                                        <ul>
+                                            <li>Cython</li>
+                                            <li>NumExpr</li>
+                                            <li>Numba</li>
+                                            <li>LLVM</li>
+                                            <li>LLVM-py</li>
+                                        </ul>
+                                    </td>
+                            	</tr>
+                            </table>
+                        </section>
+                        <section class="span4">
+                        
+                        <h2>What's New?</h2><br/>
+                            <table class="table table-bordered table-striped">
+                            <tr><td>Improved installer eliminates the need for root privileges to install Anaconda.</td></tr>
+                            <tr><td>Native Mac OSX 64-bit version for Anaconda now available.</td></tr>
+                            <tr><td>Several new packages added to the distribution. <a data-toggle="modal" href="#packages" title="Packages">Check out the complete list.</a></td></tr>
+                             </table>
+                           <div class="modal hide" id="packages">
+                        		<div class="modal-header">
+                                    <h2>Packages included in Anaconda</h2>
+                                </div>
+                                <div class="modal-body">
+                              <table class="table table-bordered">
+                                     	<tr>
+                                   	  <td nowrap="nowrap">anaconda launcher<br/>
+                                                bitarray 0.8.0<br/>
+                                                bitey<br/>
+                                                cython 0.16<br/>
+                                                dateutil 1.5<br/>
+                                                disco 0.4.2 (Linux only)<br/>
+                                                erlang (Linux only)<br/>
+                                                flask 0.9<br/>
+                                                gevent 0.13.7<br/>
+                                                gevent-websocket 0.3.6<br/>
+                                                gevent_zeromq 0.2.5<br/>
+                                                greenlet0.4.0<br/>
+                                                h5py 2.0.1<br/>
+                                                hdf5 1.8.9<br/>
+                                            </td>
+                                   	  <td nowrap="nowrap">
+                                                PIL 1.1.7<br/>
+                                                ipython 0.13<br/>
+                                                jinja2 2.6<br/>
+                                                llvm 3.1<br/>
+                                                llvmpy 0.8.2.dev<br/>
+                                                matplotlib 1.1.1<br/>
+                                                mpi4py 1.3<br/>
+                                                mpich2 1.4.1p1<br/>
+                                                networkx 1.7<br/>
+                                                nose 1.1.2<br/>
+                                                numba 0.1.dev<br/>
+                                                numexpr 2.0.1<br/>
+                                                numpy 1.7.dev<br/>
+                                                opencv 2.4.2<br/>
+                                        	</td>
+									  <td nowrap="nowrap">
+                                                openssl 1.0.1c<br/>
+                                                pandas 0.8.1<br/>
+                                                pip 1.1<br/>
+                                                pixman 0.26.2<br/>
+                                                py2cairo 1.10.0<br/>
+                                                pycurl 7.19.0<br/>
+                                                pygments 1.5<br/>
+                                                pysal 1.4.0<br/>
+                                                pysam 0.6<br/>
+                                                pytables 2.4.0<br/>
+                                                python 2.7.3<br/>
+                                                pytz 2012c<br/>
+                                                pyyaml 3.10<br/>
+                                                pyzmq 2.2.0<br/>
+                                             </td>
+                                      <td nowrap="nowrap">
+                                                redis 2.4.15 (Linux only)<br/>
+                                                redis py-2.4.13<br/>
+                                                requests 0.13.5<br/>
+                                                scikit-learn 0.11<br/>
+                                                scikits-image 0.6.1<br/>
+                                                scipy 0.11.0rc2<br/>
+                                                sqlalchemy 0.7.8<br/>
+                                                sqlite 3.7.13<br/>
+                                                statsmodels 0.4.3<br/>
+                                                sympy 0.7.1<br/>
+                                                theano 0.5.0<br/>
+                                                tornado 2.3<br/>
+                                                werkzeug 0.8.3<br/>
+                                        	</td>
+                                    	</tr>
+                               	  </table>
+                                </div>
+                                <div class="modal-footer">
+                                    <button onclick="javascript: PrintContent();" class="btn btn-primary field_padding">Print</button>&nbsp;&nbsp;<button type="button" class="btn field_padding" data-dismiss="modal">Close</button>
+                             </div>
+                            </form>
+                        </div>
+                        <h2>How Can We Help?</h2>
+                                Questions about Anaconda CE or any of our products and services? <a data-toggle="modal" href="#contact">Contact Us</a>.<br/><br/>
+                            <h2>Support</h2>    
+                            For install or technical support on any of our products, email <a href="mailto:support@continuum.io" title=" Email support@continuum.io">support@continnuum.io</a>.
+                            <div class="modal hide" id="contact">
+                        	<form action="https://crm.zoho.com/crm/WebToLeadForm" name="WebToLeads550470000000085001" method="POST" class="form-inline" accept-charset="UTF-8">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">×</button>
+                                    <h2>How Can We Help?</h2>
+                                </div>
+                                <div class="modal-body">
+                                       Ask a question below or email us at <a href="mailto:info@continuum.io">info@continuum.io</a>.<br/>
+                                       		<input type='hidden' name='xnQsjsdp' value=Hf*GsHBG9ho$/>  <input type='hidden' name='xmIwtLD' value=gagYaDNrMBmh7r4ul8Kb32-*B6-MHnNR/>  <input type='hidden' name='actionType' value=TGVhZHM=/> 
+            								<input type='hidden' name='returnURL' value='http://www.continuum.io/' />
+                                            <input type="text" required class="input-small field_padding" placeholder="First Name" name="First Name" id="firstname" />
+                                            <input type="text" required class="input-small field_padding last_name" placeholder="Last Name" name="Last Name" id="lastname" />
+                                            <input type="email" required placeholder="Email Address" class="field_padding email" name="Email" id="email" />
+                                            <textarea class="field_padding" name="Description" style="width: 490px"></textarea>
+                                            <br/>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn field_padding" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary field_padding">Contact Us</button>
+                                </div>
+                            </form>
+                        	</div>
+                            <br/><br/>
+                            <h2>Documentation</h2>
+                            Questions about Installing or using Anaconda? Check out our <a href="http://docs.continuum.io/anaconda/" title="Anaconda Documentation" target="_blank">online documentation</a>.
+                        </section>
+                    </section>
+                </article>
+            </section>
+        </section>
+		<!--#include file="footer.inc" -->
+		<!--#include file="scripts.inc" -->
+        <!-- begin olark code --><script data-cfasync="false" type='text/javascript'>/*{literal}<![CDATA[*/
+window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){f[z]=function(){(a.s=a.s||[]).push(arguments)};var a=f[z]._={},q=c.methods.length;while(q--){(function(n){f[z][n]=function(){f[z]("call",n,arguments)}})(c.methods[q])}a.l=c.loader;a.i=nt;a.p={0:+new Date};a.P=function(u){a.p[u]=new Date-a.p[0]};function s(){a.P(r);f[z](r)}f.addEventListener?f.addEventListener(r,s,false):f.attachEvent("on"+r,s);var ld=function(){function p(hd){hd="head";return["<",hd,"></",hd,"><",i,' onl' + 'oad="var d=',g,";d.getElementsByTagName('head')[0].",j,"(d.",h,"('script')).",k,"='",l,"//",a.l,"'",'"',"></",i,">"].join("")}var i="body",m=d[i];if(!m){return setTimeout(ld,100)}a.P(1);var j="appendChild",h="createElement",k="src",n=d[h]("div"),v=n[j](d[h](z)),b=d[h]("iframe"),g="document",e="domain",o;n.style.display="none";m.insertBefore(n,m.firstChild).id=z;b.frameBorder="0";b.id=z+"-loader";if(/MSIE[ ]+6/.test(navigator.userAgent)){b.src="javascript:false"}b.allowTransparency="true";v[j](b);try{b.contentWindow[g].open()}catch(w){c[e]=d[e];o="javascript:var d="+g+".open();d.domain='"+d.domain+"';";b[k]=o+"void(0);"}try{var t=b.contentWindow[g];t.write(p());t.close()}catch(x){b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
+/* custom configuration goes here (www.olark.com/documentation) */
+olark.identify('8646-991-10-6415');/*]]>{/literal}*/</script><noscript><a href="https://www.olark.com/site/8646-991-10-6415/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript><!-- end olark code -->
+	</body>
+</html>

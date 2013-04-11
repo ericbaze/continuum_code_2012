@@ -1,0 +1,84 @@
+/*
+Plugin Name: Easy WP
+Plugin URI: http://www.easy-wp.com
+Description: Easy WP transforms wordpress into a super-simple CMS;
+Version: 2.0
+Author: Luc Princen
+Author URI: http://www.to-wonder.com
+Contributors: Motief:Collectief (http://www.motiefcollectief.com)
+*/
+
+/* remove everything distracting:*/
+#adminmenu{display:none}#notice{display:none}#icon-edit-pages{display:none;}#screen-options-link-wrap{display:none;}#edit-slug-box{visibility:none}#normal-sortables{visibility:none}#pageparentdiv{display:none}#minor-publishing{display:none}#delete-action{display:none}#add_video, #add_audio, #add_media{display:none}#edButtonHTML{display:none}#edButtonPreview{display:none}.update-nag{display:none}.wrap{margin-top:40px}
+#adminmenuback, #adminmenuwrap{display:none;}
+#wphead{height:50px;width:100%;position:absolute;top:0px;left:0px;}
+body{background-image:url('../img/bg.jpg');}
+#wphead{background-color:transparent;background-image:none !important;border-bottom:0px !important;}
+#post-body{background-color:transparent !important;}
+#editorcontainer{background-color:#fff;}
+#user_info{margin-top:25px;}
+#wpwrap{overflow-x:hidden;}
+.wrap{padding-left:20px;margin-top:60px;overflow:hidden;}
+.wrap h2{font:normal bold 18px 'Lucida Grande', 'Helvetica', 'Sans-serif' !important;color:#161616;}
+.add-new-h2{display:none;}
+#publishing-action{
+	float:left;
+}
+
+#publishing-action #publish{background-image:none !important;background-color:#161616;width:100px;height:22px;border-radius:5;cursor:hand;cursor:pointer;border:0px;}
+#publishing-action #publish:hover{background-image:none !important;background-color:#cf0340 !important;width:100px;height:22px;border-radius:5;}
+#postimagediv{margin-top:45px !important;background-color:transparent !important;border:1px dashed #161616;background-image:url('../img/camera.png');background-repeat:no-repeat;background-position:50% 50%;}
+#postimagediv .hndle{display:none;}
+#postimagediv .inside{min-height:200px;background-color:transparent;}
+#postimagedive .handlediv{display:none;}
+#postimagediv #set-post-thumbnail{float:left;margin-top:0px;display:block;background-color:transparent !important;padding-top:30px;height:170px !important;width:100%;text-align:center;color:#161616;text-decoration:none;font-size:14px;font-family:'Lucida Grande', 'Helvetica', 'Sans-serif';}
+#postimagediv:hover #set-post-thumbnail{color:#CF0340;}
+#postimagediv .handlediv, #postimagediv:hover .handlediv{display:none !important;}
+.attachment-post-thumbnail{max-height:200px;min-height:75px;max-width:100%;margin-top:30px;}
+#remove-post-thumbnail{width:100%;height:100px;;display:block !important;color:#161616;text-align:center;text-decoration:none;font-size:14px;font-family:'Lucida Grande', 'Helvetica', 'Sans-serif';}
+
+#edit-slug-box{display:none;}
+
+#titlediv{width:70% !important;}
+#submitdiv{visibility:hidden;}
+#publishing-action{margin-left:-170px;margin-top:-30px;visibility:visible;}
+
+
+#backsection a{text-decoration:none;}
+
+#backbutton{
+	position:absolute;
+	top:100px;
+	width:90px;
+	height:27px;
+	left:-10px;
+	background-color:#cf0340;
+	border-radius:0px;
+	border:0px;
+	color:#fff;
+	box-shadow:3px 3px 3px #000;
+}
+#backbutton:hover{background-position:0 34px;}
+#backbutton:hover .backtext{color:#f8f8f8;}
+
+
+.backtext{font-size:15px;margin-top:3px;text-decoration:none;margin-left:10px; color:#333;}
+
+#easy-wp-overview{
+	position:absolute;
+	left:10px;
+	top:60px;
+	background-color:#dbdbdb;
+	width:146px;
+	height:152px;
+	text-align:center;
+	border:1px solid #C6C6C6;
+	text-align:center;
+	color:#21759B;
+}
+
+#easy-wp-overview img{
+	margin-top:10px;
+	margin-bottom:10px;
+	width:100px;
+}

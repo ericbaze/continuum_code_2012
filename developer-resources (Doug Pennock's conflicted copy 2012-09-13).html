@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Developer Resources - Continuum Analytics</title>
+        <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+		<!--#include file="head.inc" -->
+        <style>
+			.content, .content_center { background-image: none; background-color: #FFFFFF; }
+			.form_standard { background: url(img/inner_form_background.png); }
+			.blog_title { margin-bottom: 20px; }
+			.blog_content { margin-bottom: 20px; }
+			p { margin-right: 20px; }
+		</style>
+	</head>
+	<body>
+		<!--#include file="header.inc" -->
+        <section class="content">
+            <section class="container content_center">
+                <article class="container">
+                    <section class="row blog_content">
+                    	<section class="span12">
+                        	<h2 class="blog_title">Developer Resources</h2>
+                                    <b>Continuum Analytics is working on a variety of new open-source Python-based technologies for big data.</b><br/>
+                                    <br/>
+                                    <h3><a href="https://github.com/ContinuumIO/blaze" title="Blaze" target="_blank">Blaze</a></h3>
+ 									<p><b>Blaze is the keystone to Continuum's vision of array-oriented computing on a truly global scale.</b>  Its core components are:
+                                     <ul>
+                                     	<li>a flexible, dynamic type system that connects data from all kinds of sources to a high-level N-dimensional table that can be hierarchically composed into a rich variety of different data layouts, and</li>
+                                        <li>a dataflow-oriented computation framework which can process the data in a distributable, parallelized manner.</li>
+                                     </ul>
+                                        In addition to supporting NumPy-style dense arrays, Blaze targets a number of business data use cases including column-oriented, sparse and streaming data.</p>
+                                    <a class="btn" target="_blank" title="Blaze Source Code" href="https://github.com/ContinuumIO/blaze">Source Code</a>
+                            		<br/><br/>
+                          			<h3><a href="https://github.com/ContinuumIO/Bokeh" title="Bokeh" target="_blank">Bokeh</a></h3>
+                                    <p><b>Bokeh is a Python data visualization library combining the ideas of the <a href="http://www.cs.uic.edu/~wilkinson/TheGrammarOfGraphics/GOG.html" target="_blank" title="Grammar of Graphics">Grammar of Graphics</a> and <a href="http://mbostock.github.com/protovis/" title="Protovis" target="_blank">Protovis</a>, with enhancements to support interactive visualization. Its primary output backend is HTML5 Canvas.</b></p>
+									<p>There are many excellent plotting packages for Python, but they generally do not optimize for the particular needs of statistical plotting or multidimensional datasets.  Additionally, advanced visual customization is typically difficult for non-programmers, and most libraries do not build a reified data processing pipeline that supports rich interactivity like linked brushing.  Bokeh addresses these problems at their core by using a declarative data transformation scheme, and is engineered to operate in a client/server model for the modern web.</p>
+                                    <a class="btn" href="https://github.com/ContinuumIO/Bokeh" title="Bokeh Source Code" target="_blank">Source Code</a> <a class="btn" href="https://groups.google.com/a/continuum.io/d/forum/bokeh" title="Bokeh Mailing List" target="_blank">Developers' Mailing List</a>
+									<br/><br/>
+							        <h3><a href="https://github.com/numba/numba" title="Numba">Numba</a></h3>
+        							<p><b>Numba is an open-source, NumPy-aware optimizing compiler for Python sponsored by Continuum Analytics, Inc.</b>  It uses the remarkable LLVM compiler infrastructure to compile Python byte-code to machine code especially for use in the NumPy run-time and SciPy modules.</p>
+									<a class="btn" href="https://github.com/numba/numba" title="Numba Source Code" target="_blank">Source Code</a> <a class="btn" href="https://groups.google.com/forum/?fromgroups#!topic/scikits-image/hx9WlRg_ad4" title="Numba Mailing List" target="_blank">Developers' Mailing List</a>
+                                    <br/><br/>
+       								<h3>Anaconda Components</h3>
+                                    <br/>
+                                    <table class="table table-striped table-bordered">
+                                        <tr>
+                                            <td><h4><a href="http://discoproject.org" title="The Disco Project" target="_blank">Disco</a></h4></td>
+                                            <td><a href="http://discoproject.org" title="The Disco Project">The Disco Project</a></td>
+                                            <td><a href="http://groups.google.com/group/disco-dev" title="Disco Developers' mailing list">Developers' mailing list</a></td>
+                                            <td><a href="http://github.com/discoproject/disco/" title="Download Disco" target="_blank">Source Code</a></td>
+                                            <td><a href="http://discoproject.org/doc/disco/" title="Documentation" target="_blank">Documentation</a></td>
+                                            <td><a href="http://github.com/discoproject/disco/issues/" title="Issue Tracker" target="_blank">Issue Tracker</a></td>
+                                        </tr>                                   
+                                        <tr>
+                                            <td><h4><a href="http://ipython.org" title="iPython" target="_blank">IPython</a></h4></td>
+                                            <td><a href="http://projects.scipy.org/mailman/listinfo/ipython-dev" title="Developers' mailing list" target="_blank">Developers' mailing list</a></td>
+                                            <td><a href="http://projects.scipy.org/mailman/listinfo/ipython-user" title="Users' mailing list" target="_blank">Users' mailing list</a></td>
+                                            <td><a href="https://github.com/ipython/ipython" title="Download iPython" target="_blank">Source Code</a></td>
+                                            <td><a href="http://ipython.org/documentation.html title="Documentation" target="_blank"">Documentation</a></td>
+                                            <td><a href="https://github.com/ipython/ipython/issues" title="Issue Tracker" target="_blank">Issue Tracker</a></td>
+                                        </tr>
+                                        <tr><td colspan="6"><h4><a href="http://numpy.scipy.org/" title="NumPy" target="_blank">NumPy</a></h4></tr>
+                                    	<tr><td colspan="6"><h4><a href="http://scipy.org/" title="SciPy" target="_blank">SciPy</a></h4></tr>
+                                    	<tr><td colspan="6"><h4><a href="http://www.pytables.org/moin" title="PyTables" target="_blank">PyTables</a></h4></tr>
+                                    	<tr><td colspan="6"><h4><a href="http://pandas.pydata.org/" title="Pandas" target="_blank">Pandas</a></h4></tr>
+                                    </table>
+                                    <br/>
+                                    <h3>Questions?</h3>
+                                    If you'd like more information about the projects we're working on, please <a href="mailto:info@continuum.io" title="Contact Us">contact us.</a><br/><br/>
+                        </section>
+                    </section>
+                </article>
+            </section>
+        </section>
+		<!--#include file="footer.inc" -->
+		<!--#include file="scripts.inc" -->
+	</body>
+</html>

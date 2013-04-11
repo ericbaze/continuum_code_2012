@@ -1,0 +1,577 @@
+a:8:{i:0;s:35:"X-Powered-By: PHP/5.3.6-13ubuntu3.6";i:1;s:38:"Expires: Thu, 12 Jul 2012 20:57:06 GMT";i:2;s:44:"Last-Modified: Thu, 19 Jul 2012 20:57:06 GMT";i:3;s:51:"Cache-Control: no-cache, must-revalidate, max-age=0";i:4;s:16:"Pragma: no-cache";i:5;s:42:"X-Pingback: http://continuum.io/xmlrpc.php";i:6;s:38:"Content-Type: text/html; charset=UTF-8";i:7;s:48:"Link: <http://continuum.io/?p=46>; rel=shortlink";}<!--headers--><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US"><head profile="http://gmpg.org/afn/11">
+	<meta http-equiv="Content-Type" content="text/html charset==UTF-8" />
+	
+    <title>
+		Counting Words, Part One | 		Continuum Analytics    </title>
+            <link href="/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="/css/custom.css" rel="stylesheet" type="text/css" />
+		<link href="/css/prettify.css" rel="stylesheet" type="text/css" />
+        <link rel="shortcut icon" href="/img/favicon.ico"/>
+		<link rel="apple-touch-icon" href="/img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png" />	<link rel="pingback" href="http://continuum.io/xmlrpc.php" />
+
+    <style>
+		
+	.content { background-image: none; background-color: #FFFFFF; }
+	.content_center { background-image: none; background-color: #FFFFFF; }
+	.form_standard { background: url(http://staging.continuum.io/img/inner_form_background.png); }
+	.blog_title { margin-bottom: 20px; }
+	.blog_content { margin-bottom: 20px; }
+	p { margin-right: 20px; }
+	
+	#content .entry-title {
+		color: #000;
+		font-size: 21px;
+		font-weight: bold;
+		line-height: 1.3em;
+		margin-bottom: 0;
+	}
+	.entry-title h1 {
+		color: #000;
+		font-size: 21px;
+		font-weight: bold;
+		line-height: 1.3em;
+		margin-bottom: 0;
+	}
+	.entry-title a:link,
+	.entry-title a:visited {
+		color: #000;
+		text-decoration: none;
+	}
+	.entry-title a:active,
+	.entry-title a:hover {
+		color: #ff4b33;
+	}
+	.entry-meta {
+		color: #888;
+		font-size: 12px;
+	}
+	.entry-meta abbr,
+	.entry-utility abbr {
+		border: none;
+	}
+	.entry-meta abbr:hover,
+	.entry-utility abbr:hover {
+		border-bottom: 1px dotted #666;
+	}
+	.entry-content,
+	.entry-summary {
+		clear: both;
+		padding: 12px 0 0 0;
+	}
+	#content .entry-summary p:last-child {
+		margin-bottom: 12px;
+	}
+	.entry-content fieldset {
+		border: 1px solid #e7e7e7;
+		margin: 0 0 24px 0;
+		padding: 24px;
+	}
+	.entry-content fieldset legend {
+		background: #fff;
+		color: #000;
+		font-weight: bold;
+		padding: 0 24px;
+	}
+	.entry-content input {
+		margin: 0 0 24px 0;
+	}
+	.entry-content input.file,
+	.entry-content input.button {
+		margin-right: 24px;
+	}
+	.entry-content label {
+		color: #888;
+		font-size: 12px;
+	}
+	.entry-content select {
+		margin: 0 0 24px 0;
+	}
+	.entry-content sup,
+	.entry-content sub {
+		font-size: 10px;
+	}
+	.entry-content blockquote.left {
+		float: left;
+		margin-left: 0;
+		margin-right: 24px;
+		text-align: right;
+		width: 33%;
+	}
+	.entry-content blockquote.right {
+		float: right;
+		margin-left: 24px;
+		margin-right: 0;
+		text-align: left;
+		width: 33%;
+	}
+	.page-link {
+		clear: both;
+		color: #000;
+		font-weight: bold;
+		margin: 0 0 22px 0;
+		word-spacing: 0.5em;
+	}
+	.page-link a:link,
+	.page-link a:visited {
+		background: #f1f1f1;
+		color: #333;
+		font-weight: normal;
+		padding: 0.5em 0.75em;
+		text-decoration: none;
+	}
+	.home .sticky .page-link a {
+		background: #d9e8f7;
+	}
+	.page-link a:active,
+	.page-link a:hover {
+		color: #ff4b33;
+	}
+	body.page .edit-link {
+		clear: both;
+		display: block;
+	}
+	#entry-author-info {
+		background: #f2f7fc;
+		border-top: 4px solid #000;
+		clear: both;
+		font-size: 14px;
+		line-height: 20px;
+		margin: 24px 0;
+		overflow: hidden;
+		padding: 18px 20px;
+	}
+	#entry-author-info #author-avatar {
+		background: #fff;
+		border: 1px solid #e7e7e7;
+		float: left;
+		height: 60px;
+		margin: 0 -104px 0 0;
+		padding: 11px;
+	}
+	#entry-author-info #author-description {
+		float: left;
+		margin: 0 0 0 104px;
+	}
+	#entry-author-info h2 {
+		color: #000;
+		font-size: 100%;
+		font-weight: bold;
+		margin-bottom: 0;
+	}
+	.entry-utility {
+		clear: both;
+		color: #888;
+		font-size: 12px;
+		line-height: 18px;
+		margin-bottom: 20px;
+	}
+	.entry-meta a,
+	.entry-utility a {
+		color: #888;
+	}
+	.entry-meta a:hover,
+	.entry-utility a:hover {
+		color: #ff4b33;
+	}
+	#content .video-player {
+		padding: 0;
+	}
+
+
+	</style>
+
+</head>
+<body onload="prettyPrint()">
+<!-- header -->
+<header class="header">
+            <section class="header_all"></section>
+            <section class="header_left"></section>
+            <section class="header_right"></section>
+            <section class="container header_center">
+              <h1>Continuum Analytics</h1>
+                <article class="tagline">Python Visualization and Data Exploration</article>
+                <nav class="navbar">
+                    <section class="navbar-inner">
+                        <section class="container">
+                        <ul class="nav">
+							<li class="dropdown"><a href="/index.html" title="Continuum Analytics">Home</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="/products.html">Products&nbsp; <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/python-for-big-data.html" title="Python for Big Data">Python for Big Data</a></li>
+                                    <li><a href="/anaconda.html" title="Anaconda">Anaconda</a></li>
+                                    <!--<li><a href="/blaze.html" title="Blaze">Blaze</a></li>-->
+                                    <!--<li><a href="/excel-plug-in.html" title="Excel Plug-in">Excel Plug-in</a></li>-->
+                                    <li><a href="/downloads.html" title="Downloads">Downloads</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a href="/consulting.html" title="">Consulting</a></li>
+							<li class="dropdown"><a href="/training.html" title="">Training</a></li>
+                            <!--<li class="dropdown">
+                                <a data-target="#" href="/training.html" title="Training" class="dropdown-toggle" data-toggle="dropdown">Training&nbsp; <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/training.html" title="Course Descriptions">Courses</a></li>
+                                    <li><a href="/training.html" title="Course Schedules">Calendar</a></li>
+                                </ul>
+                            </li>-->
+                            <li class="dropdown"><a href="/developer-resources.html">Developers</a></li>
+                          <li class="dropdown"><a data-target="#" href="/company.html" title="Company" class="dropdown-toggle" data-toggle="dropdown">Company&nbsp; <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+									<li><a href="/about-continuum.html" title="About Continuum">About Us</a></li>
+                                    <li><a href="/our-team.html" title="Team">Our Team</a></li>
+                                    <li><a href="/careers.html" title="Careers">Careers</a></li>
+									<li><a href="/blog">Blog</a></li>
+                                    <li><a href="/press" title="Press Releases">Press Releases</a></li>
+                                    <li><a href="http://www.numfocus.org" title="NumFocus" target="_blank">NumFocus</a></li>
+                                </ul>
+						  </li>
+						  <li class="dropdown"><a href="/support.html">Contact Us</a></li>
+                          <li class="dropdown">
+                              <div class="social_media_header">&nbsp;
+                                  <a href="http://plus.google.com/108011804375544975017" title="Circle Continuum Analytics on Google+" target="_blank"><img src="/img/gplus_header.png" alt="Circle Continuum Analytics on Google+" width="33" height="33"></a>
+                                  <a href="http://www.twitter.com/continuumio" title="Follow @continuumio on Twitter" target="_blank"><img src="/img/twitter_header.png" alt="Follow @continuumio on Twitter" width="33" height="33"></a>
+                                  <a href="http://www.linkedin.com/company/continuum-analytics-inc-" title="Follow Continuum Analytics on LinkedIn" target="_blank"><img src="/img/linkedin_header.png" alt="Follow Continuum Analytics on LinkedIn" width="33" height="33"></a>
+                                  <a href="http://www.facebook.com/ContinuumAnalytics" title="Like Continuum Analytics on Facebook" target="_blank"><img src="/img/facebook_header.png" alt="Like Continuum Analytics on Facebook" width="33" height="33"></a>
+                                  <!--<a href="http://www.youtube.com/user/ContinuumIO" title="Check out Continuum's support videos on YouTube" target="_blank"><img src="/img/youtube_header.png" alt="Check out Continuum's support videos on YouTube" width="33" height="33"></a>-->
+                              </div>
+                          </li>
+                        </ul>
+                        </section>
+                  </section>
+              </nav>
+            </section>
+        </header><!-- /header --><section class="content_center">
+    <article class="container">
+        <section class="row blog_content">
+            <section class="span8">            
+                <div id="content" role="main">            
+                
+
+				<!--<div id="nav-above" class="navigation">
+					<div class="nav-previous"><a href="http://continuum.io/blog/mapreduce/" rel="prev"><span class="meta-nav">&larr;</span> MapReduce and All That Disco/Hadoopla!</a></div>
+					<div class="nav-next"><a href="http://continuum.io/blog/counting-words-part-2/" rel="next">Counting Words, Part Two <span class="meta-nav">&rarr;</span></a></div>
+				</div>--><!-- #nav-above -->
+
+				<div id="post-46" class="post-46 post type-post status-publish format-standard hentry category-disco">
+                    <div style="float:left; margin-right: 10px"><!-- avatar -->
+                    <img alt='' src='http://0.gravatar.com/avatar/2851d5d532ab575906b2a1228bc62717?s=32&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />                    </div><!-- close avatar -->
+                    <div><!-- start title -->
+                        <h2>Counting Words, Part One</h2>
+    
+                        <div class="entry-meta">
+                            <span class="meta-prep meta-prep-author">Posted on</span> <a href="http://continuum.io/blog/counting-words-part-1/" title="9:05 pm" rel="bookmark"><span class="entry-date">July 13, 2012</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://continuum.io/blog/author/benz/" title="View all posts by Benjamin Zaitlen">Benjamin Zaitlen</a></span>                        </div><!-- .entry-meta -->
+                    </div><!-- end title -->
+
+					<div class="entry-content">
+						<h3>Counting Words: The &#8220;Hello World&#8221; of MapReduce</h3>
+<p>In the original Willy Wonka film, if you recall, Charlie attends a chemistry class taught by Mr. Turkentine. Mr. Turkentine asks Charlie what the result would be from a complicated mix of chemicals. Charlie, of course, doesn&#8217;t know the answer and Mr. Turkentine says:</p>
+<p>
+<blockquote><em>Of course you don&#8217;t know. You don&#8217;t know because only I know. If you knew and I didn&#8217;t  know, then you&#8217;d be teaching me instead of me teaching you &#8211; and for a student to be teaching his teacher is presumptuous and rude. Do I make myself clear?</em></p></blockquote>
+<p>Yes, repetitive use and conjugation of a few words over several sentences can add dramatic effect &#8212; but, it&#8217;s also confusing, annoying, and something authors typically try to avoid. If Charlie could quickly count the unique words in Mr. Turkentine&#8217;s rhetorical insult, then perhaps Charlie, in a snappy retort, could point out this fact to Mr. Turkentine.</p>
+<p>This brings us to our canonical MapReduce example: <em>Counting Words.</em> Many MapReduce jobs are simply counting the occurrences of events. These routines are useful for nearly all data types: text, images, weather, finance, particle physics, logs, etc.</p>
+<p>So our question is: <strong>&#8220;What is the total count for each unique word in Mr. Turkentine&#8217;s quote?&#8221;</strong></p>
+<p><P>Obviously, this can be accomplished in a few Python lines on a single machine, but the example below will form the core of formally understanding MapReduce and how to use <a href="http://discoproject.org/" title="Disco Project" target="_blank">Disco&#8217;s</a> MapReduce distributed computing framework.</p>
+<p>
+<h3 id="where_we.27re_going">Where We&#8217;re Going</h3>
+<p>Again, the purpose of MapReduce is to distribute counting over several machines in a cluster; data can be split into records and operated on independently. This is often referred to as embarrassingly parallel; little effort is required to decompose the problem into smaller problems. As a sanity check, it&#8217;s good to remember that the output of MapReduce should result in less data &#8212; often significantly less &#8212; than the input.</p>
+<p>
+<h3 id="Level_3_Reiterated">Level 3 Reiterated</h3>
+<p>For each word in a line of text, map the word to a key and a value of 1 as a <a href="http://docs.python.org/library/functions.html#tuple" title="tuple" target="_blank">tuple</a>. Partition the <br/>key-value pairs into &#8220;buckets&#8221; or &#8220;shards&#8221; so that reducers can operate on those buckets. In each reducer, sum the number of counts of each unique word and return a list of unique words and <br/>count totals.</p>
+<p>
+<h3 id="Input">Input</h3>
+<p>Let&#8217;s reorganize the quote into several lines:</p>
+<pre><ol class="linenums"><li class="L0"><span class="pln">Of course you don't know. You don't know</span></li><li class="L1"><span class="pln">because only I know. If you knew and I didn't</span></li><li class="L2"><span class="pln">know, then you'd be teaching me instead of teaching</span></li><li class="L3"><span class="pln">and for a student to be teaching a teacher is presumptuous</span></li><li class="L4"><span class="pln">and rude. Do I make myself clear?</span></li></ol></pre>
+<p>Each line from the quote is passed to the map function. In <em>Disco</em>, splitting lines of text from a file is done by default. Later, we will override the default functionality and use a <em>map reader</em> to handle data which can&#8217;t easily be split line by line. We want many nodes working on mapping the data. Disco&#8217;s MapReduce framework accomplishes by delivering lines to any available map node.</p>
+<p>
+<h3 id="Map_Step">Map Step</h3>
+<p>Map is a common function built into many programming language. Generally, map applies a function to every item in a list. In the map step, we map each word to a key-value pair tuple. We&#8217;ll use the word as a <strong>key</strong> and the numerical value <strong>1</strong>. as the value. The map function, in <em>Disco</em> has two arguments &#8212; <em>line</em> (a line of text) and <em>params</em> (which we will ignore for now).<br/><br/><a href="/wp-content/uploads/2012/07/map_reduce_figure1.gif"><img title="Map Step" src="/wp-content/uploads/2012/07/map_reduce_figure1.gif" alt="Map Step" width="600" height="150" /></a></p>
+<p>The line is split into words, each word is stripped of punctuation, and all letters are converted to lower case. The map function applied to a line of text, returns a series of tuples in form of &#8220;word,1&#8243; or</p>
+<p>
+<blockquote><em>[("of", 1), ("course", 1), ("you", 1), ("don't",1), ("know",1), ("you",1)...]</em></p></blockquote>
+<pre class="prettyprint lang-py">def map(line, params):<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;import string<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for word in line.split():<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;strippedWord = word.translate(string.maketrans("",""), string.punctuation)<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yield strippedWord, 1</pre>
+<div class="accordion-group">
+<div class="accordion-heading"><a class="accordion-toggle" href="#collapseTwo" data-toggle="collapse" data-parent="#accordion2">Series of Tuples Explained</a></div>
+<div id="collapseTwo" class="accordion-body collapse">
+<div class="accordion-inner">The series of tuples returned from the map is called an iterable &#8212; which can be treated in a similar manner to a list i.e, [i for i in iterable] &#8212; though not directly callable as in: iterable[0]. With larger and larger data sets, we need to be able to process data sizes larger than memory space found on common machines. If the map function stores the key-value pairs in a Python object to be returned when complete, we will be in danger of exceeding that memory space. Using the keyword <strong>yield</strong>, gives Disco the power to consume and manage data in a much more flexible way.</div>
+</div>
+</div>
+<p>
+<h3 id="Partition_Step">Partition Step</h3>
+<p>Next, we need to assign each key-value pair to a particular reducer. This is accomplished by <em>partitioning</em>, and is often thought of as placing data into buckets. (Sometimes I think MapReduce should really be MapPartitionReduce since partitioning is such an important step). Partitioning should spread the data as evenly as possible over the &#8220;buckets&#8221; resulting in each reducer processing the same amount of data.</p>
+<p><a href="/wp-content/uploads/2012/07/map_reduce_figure1.gif"><img title="Map Step" src="http://staging.continuum.io/wp-content/uploads/2012/07/map_reduce_figure2.gif" alt="Map Step" width="600" height="224" /></a></p>
+<p>A common method of accomplishing such a task is to create a <a href="http://en.wikipedia.org/wiki/Hash_function" title="hash" target="_blank">hash</a> of the word and take the resulting value <a href="http://en.wikipedia.org/wiki/Modulo_operation" title="modulo"  target="_blank">modulo</a> the number of reducers.</p>
+<pre class="prettyprint linenums lang-py">
+def default_partition(key, nr_partitions, params):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return hash(str(key)) % nr_partitions
+</pre>
+<p>The table below demonstrates the results from hash and modulo functions on words in the text.</p>
+<table class="table table-bordered table-striped">
+<tbody>
+<tr>
+<th>Word</th>
+<th>Hash</th>
+<th>Hash % 4</th>
+</tr>
+<tr>
+<td>of</td>
+<td>-1463488791</td>
+<td>4</td>
+</tr>
+<tr>
+<td>course</td>
+<td>2334184425</td>
+<td>0</td>
+</tr>
+<tr>
+<td>you</td>
+<td>1116843962</td>
+<td>2</td>
+</tr>
+<tr>
+<td>don&#8217;t</td>
+<td>-482782459</td>
+<td>1</td>
+</tr>
+<tr>
+<td>know</td>
+<td>326123353</td>
+<td>3</td>
+</tr>
+<tr>
+<td>instead</td>
+<td>-1683785287</td>
+<td>3</td>
+</tr>
+<tr>
+<td>of</td>
+<td>-1463488791</td>
+<td>4</td>
+</tr>
+<tr>
+<td>me</td>
+<td>-1475813024</td>
+<td>1</td>
+</tr>
+<tr>
+<td>teaching</td>
+<td>-1354514375</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>In <b>bucket 2</b> (words with hash(key)% 5 equal to 2) we have tuples such as:</p>
+<p>
+<blockquote><em>[("you", 1), ("you", 1), ("then",1), ("and",1), ("be",1),("only",1), ("and",1),("rude",1),("you",1)...]</em></p></blockquote>
+<div class="accordion-group">
+<div class="accordion-heading"><a class="accordion-toggle" href="#collapseThree" data-toggle="collapse" data-parent="#accordion2">How can we be sure that each instance of know the text goes to the same reducer?</a></div>
+<div id="collapseThree" class="accordion-body collapse">
+<div class="accordion-inner">Because each instance of <strong>know</strong> is placed into the same reducer by the partition function.</div>
+</div>
+</div>
+<div class="accordion-group">
+<div class="accordion-heading"><a class="accordion-toggle" href="#collapseFour" data-toggle="collapse" data-parent="#accordion2">How does the reducer know which partition it&#8217;s operating on?</a></div>
+<div id="collapseFour" class="accordion-body collapse">
+<div class="accordion-inner">It doesn&#8217;t! Reducers are unaware of the partition they are operating on.</div>
+</div>
+</div>
+<p>
+<h3 id="Reduce_Step">Reduce Step</h3>
+<p>Reduce is another common built-in function which, traditionally, operates on two arguments and returns one value; often, this is an algebraic expression. Within the context of MapReduce, the <em>Reduce</em> step is given the iterable of key-value pairs and combines the values into an answer or list of answers. For counting words, we sum the values of keys which compare equal &#8212; that is, count the number of you&#8217;s, the&#8217;s, etc.</p>
+<pre class="prettyprint linenums lang-py">def reduce(iter, params):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from disco.util import kvgroup
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for word, counts in kvgroup(sorted(iter)):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yield word, sum(counts)</pre>
+<p>Python is wonderfully succinct, but for the inexperienced programmer, it can be more on the cryptic side of coding. <strong>reduce</strong> takes two arguments: <em>iter</em> (an iterable object) and <em>param</em> (ignored for now). Remember, the goal is to count the occurrence of each word. The reduce function above takes advantage of two Python functions: <em>sorted</em> and <em>kvgroup</em>. <em>iter</em> isn&#8217;t really a list &#8212; it&#8217;s an iterable object, but we still use it in similar ways to a list. The function <em>sorted</em> sorts any iterable: dictionary, lists, tuples, etc. and returns a sorted list. By default <em>sorted</em> compares the elements directly, but one can define any key to be used by sorted. In our case, we have tuples of <strong>(word, 1)</strong>, and we want to sort them alphabetically.</p>
+<div class="accordion-group">
+<div class="accordion-heading"><a class="accordion-toggle" href="#collapseSortingExample" data-toggle="collapse" data-parent="#accordion2">Sorting Example</a></div>
+<div id="collapseSortingExample" class="accordion-body collapse collapse">
+<div class="accordion-inner">
+<pre class="prettyprint lang-py">
+>>>iterList = [("course", 1), ("you"), 1, ("you", 1), ("then",1), ("and",1), ("then",1),("only",1)]<br/>
+>>>sorted_iterList = sorted(iterList)<br/>
+>>>sorted_iterList
+[('and', 1), ('course', 1), ('only', 1), ('then', 1), ('then', 1), ('you', 1), ('you', 1)]<br/>
+</pre>
+</div>
+</div>
+</div>
+<p><br/></p>
+<p>On the sorted list we then apply the <em>kvgroup</em> function. Similar to Python&#8217;s <a href="http://docs.python.org/library/itertools.html#itertools.groupby">groupby</a>, Disco&#8217;s <a href="http://discoproject.org/doc/disco/lib/util.html">kvgroup</a>, groups values of <strong>consecutive</strong> keys which compare equal. <em>kvgroup</em> returns the key and a generator of values. A generator is a <em>function</em> which returns an iterable &#8212; and again, can be used similarly to a list. Starting from the sorted list above:</p>
+<div class="accordion-group">
+<div class="accordion-heading"><a class="accordion-toggle" href="#kvgroupBreakdown" data-toggle="collapse" data-parent="#accordion2">sorted/kvgroup breakdown</a></div>
+<div id="kvgroupBreakdown" class="accordion-body collapse collapse">
+<div class="accordion-inner">
+<pre class="prettyprint linenums lang-py">
+>>>from disco.util import kvgroup<br/>
+>>>sorted_iterList<br/>
+>>>for k,v in kvgroup(sorted_iterList):<br/>
+....: print k,v<br/>
+....:<br/>
+and at 0xa28a2ac&gt;<br/>
+course at 0xa28a2fc&gt;<br/>
+only at 0xa28a2ac&gt;<br/>
+then at 0xa28a2fc&gt;<br/>
+you at 0xa28a2ac&gt;
+</pre>
+</div>
+</div>
+</div>
+<p><br/></p>
+<p>Recall the reduce function:</p>
+<pre class="prettyprint linenums lang-py">
+def reduce(iter, params):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from disco.util import kvgroup<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for word, counts in kvgroup(sorted(iter)):<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yield word, sum(counts)</pre>
+<p><br/></p>
+<p>From the <em>map</em> function an iterable of key-value tuples is yielded. That iterable, the keys (which are words), are sorted alphabetically and the values of the key-value tuples are grouped. Lastly, for every word and group of values, we return the word and the sum of those values.</p>
+<div class="accordion-group">
+<div class="accordion-heading"><a class="accordion-toggle" href="#orderQuestion" data-toggle="collapse" data-parent="#accordion2">What happens if the iterable isn&#8217;t sorted before calling kvgroup?</a></div>
+<div id="orderQuestion" class="accordion-body collapse collapse">
+<div class="accordion-inner">sums are incorrect and the same keys are returned at different times.</div>
+</div>
+</div>
+<p>
+<h3>And again with graphics!</h3>
+<p>Put words in a bucket, sort the bucket, and count the unique items:<br />
+<a href="/wp-content/uploads/2012/07/map_reduce_figure3.gif"><img title="Reduce Image" src="/wp-content/uploads/2012/07/map_reduce_figure3.gif" alt="Map Step" width="600" height="224" /></a></p>
+<p>
+<h3 id="Output">Output</h3>
+<p>From the reducers print the word and total count of the occurrences:</p>
+<pre class="prettyprint linenums lang-py">for word, count in result_iterator(job.wait(show=True)):<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print word, count</pre>
+<p>
+<h3 id="Conculsion">Conculsion</h3>
+<p>MapReduce takes advantage of commodity clusters by spreading the computation over each node. Like many frameworks, MapReduce offers the following:</p>
+<p>
+<blockquote><em>&#8220;Learning the right abstraction will simplify your life.&#8221; &#8212; Travis Oliphant</em></p></blockquote>
+<p>Disco offers a Python MapReduce framework which allows me to easily process data I otherwise would have difficulty doing.</p>
+											</div><!-- .entry-content -->
+
+
+					<div class="entry-utility">
+						This entry was posted in <a href="http://continuum.io/blog/category/disco/" title="View all posts in Disco" rel="category tag">Disco</a>. Bookmark the <a href="http://continuum.io/blog/counting-words-part-1/" title="Permalink to Counting Words, Part One" rel="bookmark">permalink</a>.											</div><!-- .entry-utility -->
+				</div><!-- #post-## -->
+
+				<div id="nav-below" class="navigation">
+					<div class="nav-previous" style="float: left;"><a href="http://continuum.io/blog/mapreduce/" rel="prev"><span class="meta-nav">&larr;</span> MapReduce and All That Disco/Hadoopla!</a></div>
+					<div class="nav-next" style="float: right;"><a href="http://continuum.io/blog/counting-words-part-2/" rel="next">Counting Words, Part Two <span class="meta-nav">&rarr;</span></a></div>
+				</div><!-- #nav-below -->
+				<!-- Uncomment to allow comments -->
+				
+                </div><!-- #content -->
+            </section> <!-- span 8 -->
+           	<section class="span4">
+    	<div id="search-3" class="widget widget_search"><form role="search" method="get" id="searchform" action="http://continuum.io/" >
+	<div><label class="screen-reader-text" for="s">Search for:</label>
+	<input type="text" value="" name="s" id="s" />
+	<input type="submit" id="searchsubmit" value="Search" />
+	</div>
+	</form></div>		<div id="recent-posts-3" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+				<li><a href="http://continuum.io/blog/counting-words-part-2/" title="Counting Words, Part Two">Counting Words, Part Two</a></li>
+				<li><a href="http://continuum.io/blog/counting-words-part-1/" title="Counting Words, Part One">Counting Words, Part One</a></li>
+				<li><a href="http://continuum.io/blog/mapreduce/" title="MapReduce and All That Disco/Hadoopla!">MapReduce and All That Disco/Hadoopla!</a></li>
+				</ul>
+		</div><div id="categories-3" class="widget widget_categories"><h3 class="widget-title">Categories</h3>		<ul>
+	<li class="cat-item cat-item-7"><a href="http://continuum.io/blog/category/disco/" title="View all posts filed under Disco">Disco</a>
+</li>
+		</ul>
+</div><div id="archives-3" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<ul>
+			<li><a href='http://continuum.io/blog/2012/07/' title='July 2012'>July 2012</a></li>
+		</ul>
+</div><div id="meta-3" class="widget widget_meta"><h3 class="widget-title">Meta</h3>			<ul>
+						<li><a href="http://continuum.io/wp-login.php">Log in</a></li>
+			<li><a href="http://continuum.io/feed/" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://continuum.io/comments/feed/" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>
+						</ul>
+</div>
+
+
+
+</section><!-- span4 --> 
+        </section><!--/row blog_content-->
+    </article><!--container-->
+</section><!--/container content_center-->
+<!-- footer -->
+	        <footer class="footer">
+			<section class="container footer_center">
+				<section class="row">
+					<article class="span4" style="margin-top: -10px;">
+						<figure style="margin-bottom: -5px;"><a href="http://www.continuum.io" title="Continuum Analytics"><img src="/img/footer_logo.png" alt="Continuum Analytics" width="134" height="64" class="footer_logo"/></a></figure>
+						3801 Capital of Texas Highway South<br/>
+						Suite 250<br/>
+						Austin, TX 78704<br/>
+						<br/>
+						512.222.5440<br/>
+						<a class="footer_links" href="mailto:&#x69;&#x6e;&#102;&#x6f;&#00064;&#x63;&#000111;&#110;&#x74;&#x69;&#x6e;&#x75;&#x75;&#000109;&#x2e;&#105;&#111;">&#x69;&#x6e;&#102;&#x6f;&#00064;&#x63;&#000111;&#110;&#x74;&#x69;&#x6e;&#x75;&#x75;&#000109;&#x2e;&#105;&#111;</a><br/>
+						<section class="footer_social_media">
+                            <a href="http://plus.google.com/108011804375544975017" title="Circle Continuum Analytics on Google+" target="_blank"><img src="/img/gplus_header.png" alt="Circle Continuum Analytics on Google+" width="33" height="33"></a>
+                            <a href="http://www.twitter.com/continuumio" title="Follow @continuumio on Twitter" target="_blank"><img src="/img/twitter_header.png" alt="Follow @continuumio on Twitter" width="33" height="33"></a>
+                            <a href="http://www.linkedin.com/company/continuum-analytics-inc-" title="Follow Continuum Analytics on LinkedIn" target="_blank"><img src="/img/linkedin_header.png" alt="Follow Continuum Analytics on LinkedIn" width="33" height="33"></a>
+                            <a href="http://www.facebook.com/ContinuumAnalytics" title="Like Continuum Analytics on Facebook" target="_blank"><img src="/img/facebook_header.png" alt="Like Continuum Analytics on Facebook" width="33" height="33"></a>
+                            <!--<a href="http://www.youtube.com/user/ContinuumIO" title="Check out Continuum's support videos on YouTube" target="_blank"><img src="/img/youtube_header.png" alt="Check out Continuum's support videos on YouTube" width="33" height="33"></a>-->
+						</section>
+                    </article>
+                    <article class="span2 footer_align_left">
+						<b><a href="/python-for-big-data.html" title="Products" class="footer_links">Products</a></b><br/>
+						<a href="/python-for-big-data.html" title="Python for Big Data" class="footer_links">Python for Big Data</a><br/>
+						<a href="/anaconda.html" title="Anaconda" class="footer_links">Anaconda</a><br/>
+						<!--<a href="/blaze.html" title="Blaze" class="footer_links">Blaze</a><br/>
+						<a href="/excel-plug-in.html" title="Excel Plug-in" class="footer_links">Excel Plug-in</a><br/>-->
+						<a href="/downloads.html" title="Downloads" class="footer_links">Downloads</a><br/>
+						<br/>
+						<b><a href="consulting.html" title="Solutions" class="footer_links">Consulting</a></b><br/>
+						<br/>
+						<b><a href="/training.html" title="Training" class="footer_links">Training</a></b><br/>
+						<!--<a href="/course-descriptions.html" title="Courses" class="footer_links">Courses</a><br/>
+						<a href="/calendar.html" title="Calendar" class="footer_links">Calendar</a><br/>-->
+						<br/>
+						<b><a href="/support.html" title="Support" class="footer_links">Support</a></b><br/>
+					</article>
+                    <article class="span1 footer_align_left">
+						<!--<b><a href="/index.php/blog" title="Expertise" class="footer_links">Expertise</a></b><br/>-->				
+						<b><a href="/developer-resources.html" title="Developer Resources" class="footer_links">Developers</a></b><br/>
+						<br/>
+						<b><a href="/about-continuum.html" title="Company" class="footer_links">Company</a></b><br/>
+						<a href="/our-team.html" title="Our Team" class="footer_links">Our Team</a><br/>
+						<a href="/careers.html" title="Careers" class="footer_links">Careers</a><br/>
+						<a href="/index.php/blog" title="Blog" class="footer_links">Blog</a><br/>
+						<a href="/press/index.php" title="Press Releases" class="footer_links">Press</a><br/>
+						<a href="http://www.numfocus.org" title="NumFocus" class="footer_links">NumFocus</a><br/>
+						<br/>
+						<b><a href="/support.html" title="Contact Us" class="footer_links">Contact</a></b>
+					</article>
+					<article class="span4">
+                    	<section class="footer_twitter"><a href="http://www.twitter.com/continuumio" class="footer_links" target="_blank">Follow us on Twitter!</a></section>
+                   		<section id="jstwitter"></section>
+						<section class="footer_copyright">&copy; 2012 Continuum Analytics</section>
+					</article>
+				</section>
+			</section>
+		</footer>			<script src="/js/jquery.js"></script>
+		<script src="/js/bootstrap.js"></script>
+		<script src="/js/prettify.js"></script>
+        <script src="/js/twitter.js"></script>
+        <script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-27761864-1']);
+		  _gaq.push(['_trackPageview']);
+		
+		  (function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script><!-- /footer -->
+</body>
+</html>
+<!-- This Quick Cache file was built for (  continuum.io/blog/counting-words-part-1/ ) in 0.17368 seconds, on Jul 19th, 2012 at 8:57 pm UTC. -->
+<!-- This Quick Cache file will automatically expire ( and be re-built automatically ) on Jul 19th, 2012 at 9:57 pm UTC -->

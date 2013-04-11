@@ -1,0 +1,436 @@
+a:8:{i:0;s:35:"X-Powered-By: PHP/5.3.6-13ubuntu3.6";i:1;s:38:"Expires: Wed, 18 Jul 2012 14:22:47 GMT";i:2;s:44:"Last-Modified: Wed, 25 Jul 2012 14:22:47 GMT";i:3;s:51:"Cache-Control: no-cache, must-revalidate, max-age=0";i:4;s:16:"Pragma: no-cache";i:5;s:42:"X-Pingback: http://continuum.io/xmlrpc.php";i:6;s:38:"Content-Type: text/html; charset=UTF-8";i:7;s:48:"Link: <http://continuum.io/?p=31>; rel=shortlink";}<!--headers--><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US"><head profile="http://gmpg.org/afn/11">
+	<meta http-equiv="Content-Type" content="text/html charset==UTF-8" />
+	
+    <title>
+		MapReduce and All That Disco/Hadoopla! | 		Continuum Analytics    </title>
+            <link href="/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="/css/custom.css" rel="stylesheet" type="text/css" />
+		<link href="/css/prettify.css" rel="stylesheet" type="text/css" />
+        <link rel="shortcut icon" href="/img/favicon.ico"/>
+		<link rel="apple-touch-icon" href="/img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png" />	<link rel="pingback" href="http://continuum.io/xmlrpc.php" />
+
+    <style>
+		
+	.content { background-image: none; background-color: #FFFFFF; }
+	.content_center { background-image: none; background-color: #FFFFFF; }
+	.form_standard { background: url(http://staging.continuum.io/img/inner_form_background.png); }
+	.blog_title { margin-bottom: 20px; }
+	.blog_content { margin-bottom: 20px; }
+	p { margin-right: 20px; }
+	
+	#content .entry-title {
+		color: #000;
+		font-size: 21px;
+		font-weight: bold;
+		line-height: 1.3em;
+		margin-bottom: 0;
+	}
+	.entry-title h1 {
+		color: #000;
+		font-size: 21px;
+		font-weight: bold;
+		line-height: 1.3em;
+		margin-bottom: 0;
+	}
+	.entry-title a:link,
+	.entry-title a:visited {
+		color: #000;
+		text-decoration: none;
+	}
+	.entry-title a:active,
+	.entry-title a:hover {
+		color: #ff4b33;
+	}
+	.entry-meta {
+		color: #888;
+		font-size: 12px;
+	}
+	.entry-meta abbr,
+	.entry-utility abbr {
+		border: none;
+	}
+	.entry-meta abbr:hover,
+	.entry-utility abbr:hover {
+		border-bottom: 1px dotted #666;
+	}
+	.entry-content,
+	.entry-summary {
+		clear: both;
+		padding: 12px 0 0 0;
+	}
+	#content .entry-summary p:last-child {
+		margin-bottom: 12px;
+	}
+	.entry-content fieldset {
+		border: 1px solid #e7e7e7;
+		margin: 0 0 24px 0;
+		padding: 24px;
+	}
+	.entry-content fieldset legend {
+		background: #fff;
+		color: #000;
+		font-weight: bold;
+		padding: 0 24px;
+	}
+	.entry-content input {
+		margin: 0 0 24px 0;
+	}
+	.entry-content input.file,
+	.entry-content input.button {
+		margin-right: 24px;
+	}
+	.entry-content label {
+		color: #888;
+		font-size: 12px;
+	}
+	.entry-content select {
+		margin: 0 0 24px 0;
+	}
+	.entry-content sup,
+	.entry-content sub {
+		font-size: 10px;
+	}
+	.entry-content blockquote.left {
+		float: left;
+		margin-left: 0;
+		margin-right: 24px;
+		text-align: right;
+		width: 33%;
+	}
+	.entry-content blockquote.right {
+		float: right;
+		margin-left: 24px;
+		margin-right: 0;
+		text-align: left;
+		width: 33%;
+	}
+	.page-link {
+		clear: both;
+		color: #000;
+		font-weight: bold;
+		margin: 0 0 22px 0;
+		word-spacing: 0.5em;
+	}
+	.page-link a:link,
+	.page-link a:visited {
+		background: #f1f1f1;
+		color: #333;
+		font-weight: normal;
+		padding: 0.5em 0.75em;
+		text-decoration: none;
+	}
+	.home .sticky .page-link a {
+		background: #d9e8f7;
+	}
+	.page-link a:active,
+	.page-link a:hover {
+		color: #ff4b33;
+	}
+	body.page .edit-link {
+		clear: both;
+		display: block;
+	}
+	#entry-author-info {
+		background: #f2f7fc;
+		border-top: 4px solid #000;
+		clear: both;
+		font-size: 14px;
+		line-height: 20px;
+		margin: 24px 0;
+		overflow: hidden;
+		padding: 18px 20px;
+	}
+	#entry-author-info #author-avatar {
+		background: #fff;
+		border: 1px solid #e7e7e7;
+		float: left;
+		height: 60px;
+		margin: 0 -104px 0 0;
+		padding: 11px;
+	}
+	#entry-author-info #author-description {
+		float: left;
+		margin: 0 0 0 104px;
+	}
+	#entry-author-info h2 {
+		color: #000;
+		font-size: 100%;
+		font-weight: bold;
+		margin-bottom: 0;
+	}
+	.entry-utility {
+		clear: both;
+		color: #888;
+		font-size: 12px;
+		line-height: 18px;
+		margin-bottom: 20px;
+	}
+	.entry-meta a,
+	.entry-utility a {
+		color: #888;
+	}
+	.entry-meta a:hover,
+	.entry-utility a:hover {
+		color: #ff4b33;
+	}
+	#content .video-player {
+		padding: 0;
+	}
+
+
+	</style>
+
+</head>
+<body onload="prettyPrint()">
+<!-- header -->
+<header class="header">
+            <section class="header_all"></section>
+            <section class="header_left"></section>
+            <section class="header_right"></section>
+            <section class="container header_center">
+				<img src="/img/spacer.gif" alt="Continuum Analytics" width="300" height="100" border="0"  usemap="#spacerMap" id="spacer" style="float: left;"/>
+				<map name="spacerMap" id="spacerMap">
+				  <area shape="rect" coords="0,0,300,100" href="http://www.continuum.io" target="" alt="Continuum Analytics" />
+				</map>
+			  	<h1>Continuum Analytics</h1>
+                <article class="tagline">Python Visualization and Data Exploration</article>
+                <nav class="navbar">
+                    <section class="navbar-inner">
+                        <section class="container">
+                        <ul class="nav">
+							<li class="dropdown"><a href="/index.html" title="Continuum Analytics">Home</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="/products.html">Products&nbsp; <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/python-for-big-data.html" title="Python for Big Data">Python for Big Data</a></li>
+                                    <li><a href="/anaconda.html" title="Anaconda">Anaconda</a></li>
+                                    <!--<li><a href="/blaze.html" title="Blaze">Blaze</a></li>-->
+                                    <!--<li><a href="/excel-plug-in.html" title="Excel Plug-in">Excel Plug-in</a></li>-->
+                                    <li><a href="/downloads.html" title="Downloads">Downloads</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a href="/consulting.html" title="">Consulting</a></li>
+							<li class="dropdown"><a href="/training.html" title="">Training</a></li>
+                            <!--<li class="dropdown">
+                                <a data-target="#" href="/training.html" title="Training" class="dropdown-toggle" data-toggle="dropdown">Training&nbsp; <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/training.html" title="Course Descriptions">Courses</a></li>
+                                    <li><a href="/training.html" title="Course Schedules">Calendar</a></li>
+                                </ul>
+                            </li>-->
+                            <li class="dropdown"><a href="/developer-resources.html">Developers</a></li>
+                          <li class="dropdown"><a data-target="#" href="/company.html" title="Company" class="dropdown-toggle" data-toggle="dropdown">Company&nbsp; <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+									<li><a href="/about-continuum.html" title="About Continuum">About Us</a></li>
+                                    <li><a href="/our-team.html" title="Team">Our Team</a></li>
+                                    <li><a href="/careers.html" title="Careers">Careers</a></li>
+									<li><a href="/blog">Blog</a></li>
+                                    <li><a href="/press" title="Press Releases">Press Releases</a></li>
+                                    <li><a href="http://www.numfocus.org" title="NumFocus" target="_blank">NumFocus</a></li>
+                                </ul>
+						  </li>
+						  <li class="dropdown"><a href="/support.html">Contact Us</a></li>
+                          <li class="dropdown">
+                              <div class="social_media_header">&nbsp;
+                                  <a href="http://plus.google.com/108011804375544975017" title="Circle Continuum Analytics on Google+" target="_blank"><img src="/img/gplus_header.png" alt="Circle Continuum Analytics on Google+" width="33" height="33"></a>
+                                  <a href="http://www.twitter.com/continuumio" title="Follow @continuumio on Twitter" target="_blank"><img src="/img/twitter_header.png" alt="Follow @continuumio on Twitter" width="33" height="33"></a>
+                                  <a href="http://www.linkedin.com/company/continuum-analytics-inc-" title="Follow Continuum Analytics on LinkedIn" target="_blank"><img src="/img/linkedin_header.png" alt="Follow Continuum Analytics on LinkedIn" width="33" height="33"></a>
+                                  <a href="http://www.facebook.com/ContinuumAnalytics" title="Like Continuum Analytics on Facebook" target="_blank"><img src="/img/facebook_header.png" alt="Like Continuum Analytics on Facebook" width="33" height="33"></a>
+                                  <!--<a href="http://www.youtube.com/user/ContinuumIO" title="Check out Continuum's support videos on YouTube" target="_blank"><img src="/img/youtube_header.png" alt="Check out Continuum's support videos on YouTube" width="33" height="33"></a>-->
+                              </div>
+                          </li>
+                        </ul>
+                        </section>
+                  </section>
+              </nav>
+            </section>
+        </header><!-- /header --><section class="content_center">
+    <article class="container">
+        <section class="row blog_content">
+            <section class="span8">            
+                <div id="content" role="main">            
+                
+
+				<!--<div id="nav-above" class="navigation">
+					<div class="nav-previous"></div>
+					<div class="nav-next"><a href="http://continuum.io/blog/counting-words-part-1/" rel="next">Counting Words, Part One <span class="meta-nav">&rarr;</span></a></div>
+				</div>--><!-- #nav-above -->
+
+				<div id="post-31" class="post-31 post type-post status-publish format-standard hentry category-disco tag-disco">
+                    <div style="float:left; margin-right: 10px"><!-- avatar -->
+                    <img alt='' src='http://0.gravatar.com/avatar/2851d5d532ab575906b2a1228bc62717?s=32&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />                    </div><!-- close avatar -->
+                    <div><!-- start title -->
+                        <h2>MapReduce and All That Disco/Hadoopla!</h2>
+    
+                        <div class="entry-meta">
+                            <span class="meta-prep meta-prep-author">Posted on</span> <a href="http://continuum.io/blog/mapreduce/" title="7:33 pm" rel="bookmark"><span class="entry-date">July 13, 2012</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://continuum.io/blog/author/benz/" title="View all posts by Benjamin Zaitlen">Benjamin Zaitlen</a></span>                        </div><!-- .entry-meta -->
+                    </div><!-- end title -->
+
+					<div class="entry-content">
+						<div style="float: right; margin-top: 5px; margin-bottom: 10px; margin-left: 20px; margin-right: 10px;"><a data-toggle="modal" href="#myModal"><img class=" wp-image-32" title="Atlas LEGO" src="http://continuum.io/wp-content/uploads/2012/07/Atlas_LEGO.jpg" alt="Atlas Lego" width="300" height="224" style="border: solid 1px #333333;" /><br/><span style="line-height: 30px; font-style: italic;">1:50 scale model of the ATLAS detector</span></a></div>
+<div class="modal hide" id="myModal">
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">×</button></p>
+<h3>1:50 scale model of the Atlas detector</h3>
+</p></div>
+<div class="modal-body">
+  	<img src="http://continuum.io/wp-content/uploads/2012/07/Atlas_LEGO.jpg" width="541" height="400" alt="1:50 scale model of the ATLAS detector" />
+  </div>
+</div>
+<p>In the winter of 2011 <a href="http://atlas-model.mehlhase.info/" target="_blank">Sascha Mehlhase</a> completed construction on a 1:50 scale model of the ATLAS detector.</p>
+<p>Over 48 hours, Sascha painstakingly designed a 3D representation of the <a href="http://en.wikipedia.org/wiki/ATLAS_experiment">ATLAS detector</a> and then spent 33 hours building a model of it with Lego bricks. The model has 9,500 pieces and costs around $2,600.</p>
+<p>Obviously, I want one &#8212; I <em>need</em> one. An avid Lego builder in my youth, I&#8217;ve collected 20,000 Legos; and like many former and current Lego builders, all the pieces are now in one giant bucket. I want to know, <em>&#8220;Do I have all the pieces required to build the Lego ATLAS?&#8221;</em></p>
+<p>To answer the question, I <em>could</em> sort each type of Lego &#8212; keeping a count as I sorted; but this would be fraught with errors and would take more time than I&#8217;m willing to devote to such a task. If I had a few friends to help sort and count the pieces, my query would be answered much more quickly.</p>
+<p>And that&#8217;s what <strong>MapReduce</strong> is for: A defined parallel framework to &#8220;distribute Legos&#8221; which can be sorted and counted more quickly than single node processing!<br />
+<br/></p>
+<h3>What is MapReduce?</h3>
+<p><b>Three brief explanations</b></p>
+<p>Here&#8217;s another way to understand MapReduce in three increasingly more detailed explanations:</p>
+<ol>
+<li><strong>Non-Technical Definition</strong><br />
+I have a question which a data set can answer. I have lots of data and I have many computers connected to one another. MapReduce takes advantage of the connected computers and decreases the computing time used to answer my question. Specifically, MapReduce <em>maps</em> data in the form of key-value pairs to each machine and <em>reduces</em> the data to an answer.</li>
+<p><br/></p>
+<li><strong>Moderately Technical Definition</strong><br />
+I have a question which a data set can answer. I have lots of data and I have a cluster of commodity hardware.  MapReduce is a parallel framework which takes advantage of my cluster by distributing work across each machine. Specifically, MapReduce <em>maps</em> data in the form of key-value pairs, then feeds the pairs to each machine which <em>reduces</em> the data to an &#8220;answer&#8221; or a list of &#8220;answers&#8221;.</li>
+<p><br/></p>
+<li><strong>Highly Technical Definition</strong><br />
+I have a question which a data set can answer. I have lots of data and I have a cluster of nodes.  MapReduce is a parallel framework which takes advantage of my cluster by distributing work across each node. Specifically, MapReduce <em>maps</em> data in the form of key-value pairs which are then partitioned into buckets. The buckets can be spread easily over all the nodes in the cluster and each node or Reducer, <em>reduces</em> the data to an &#8220;answer&#8221; or a list of &#8220;answers&#8221;.</li>
+</ol>
+<p>What data can be processed with MapReduce? Any data that can be acted upon independently from other data.<br />
+<br/></p>
+<h3>MapReduce Languages</h3>
+<p>MapReduce has successfully captured the parallel data crunching crowd.  So much so that there exist several implementations in a variety of languages. Examples include:</p>
+<ul>
+<li><strong>Disco (Python)</strong></li>
+<li>Hadoop (Java)</li>
+<li>Amazon Elastic MapReduce (SQL-Like)</li>
+<li>Skynet (Ruby)</li>
+<li>Plasma MapReduce (OCaml)</li>
+</ul>
+<p>Continuum&#8217;s tools utilize the simplicity of Python and leverage lower-level languages for faster calculation &#8212; and Disco&#8217;s Python MapReduce Framework is a great baseline to build upon.  More on this later.</p>
+<p>As Continuum&#8217;s data scientist and user advocate, I will be posting novel use cases of MapReduce, Disco tutorials, and general data science thoughts.  At Continuum, we believe that yes, <em>Big Data</em> has answers, but just as important, it invites domain experts and amateurs alike to ask more informed questions.  We strive to create the tools used for deep, fast data introspection and exploration.  From this, patterns and behaviors emerge and important conclusions can be drawn &#8212; like, are there enough Legos in my bucket to build an ATLAS detector&#8230;</p>
+											</div><!-- .entry-content -->
+
+
+					<div class="entry-utility">
+						This entry was posted in <a href="http://continuum.io/blog/category/disco/" title="View all posts in Disco" rel="category tag">Disco</a> and tagged <a href="http://continuum.io/blog/tag/disco/" rel="tag">Disco</a>. Bookmark the <a href="http://continuum.io/blog/mapreduce/" title="Permalink to MapReduce and All That Disco/Hadoopla!" rel="bookmark">permalink</a>.											</div><!-- .entry-utility -->
+				</div><!-- #post-## -->
+
+				<div id="nav-below" class="navigation">
+					<div class="nav-previous" style="float: left;"></div>
+					<div class="nav-next" style="float: right;"><a href="http://continuum.io/blog/counting-words-part-1/" rel="next">Counting Words, Part One <span class="meta-nav">&rarr;</span></a></div>
+				</div><!-- #nav-below -->
+				<!-- Uncomment to allow comments -->
+				
+                </div><!-- #content -->
+            </section> <!-- span 8 -->
+           	<section class="span4">
+    	<div id="search-3" class="widget widget_search"><form role="search" method="get" id="searchform" action="http://continuum.io/" >
+	<div><label class="screen-reader-text" for="s">Search for:</label>
+	<input type="text" value="" name="s" id="s" />
+	<input type="submit" id="searchsubmit" value="Search" />
+	</div>
+	</form></div>		<div id="recent-posts-3" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+				<li><a href="http://continuum.io/blog/counting-words-part-2/" title="Counting Words, Part Two">Counting Words, Part Two</a></li>
+				<li><a href="http://continuum.io/blog/counting-words-part-1/" title="Counting Words, Part One">Counting Words, Part One</a></li>
+				<li><a href="http://continuum.io/blog/mapreduce/" title="MapReduce and All That Disco/Hadoopla!">MapReduce and All That Disco/Hadoopla!</a></li>
+				</ul>
+		</div><div id="categories-3" class="widget widget_categories"><h3 class="widget-title">Categories</h3>		<ul>
+	<li class="cat-item cat-item-7"><a href="http://continuum.io/blog/category/disco/" title="View all posts filed under Disco">Disco</a>
+</li>
+		</ul>
+</div><div id="archives-3" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<ul>
+			<li><a href='http://continuum.io/blog/2012/07/' title='July 2012'>July 2012</a></li>
+		</ul>
+</div><div id="meta-3" class="widget widget_meta"><h3 class="widget-title">Meta</h3>			<ul>
+						<li><a href="http://continuum.io/wp-login.php">Log in</a></li>
+			<li><a href="http://continuum.io/feed/" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://continuum.io/comments/feed/" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>
+						</ul>
+</div>
+
+
+
+</section><!-- span4 --> 
+        </section><!--/row blog_content-->
+    </article><!--container-->
+</section><!--/container content_center-->
+<!-- footer -->
+	        <footer class="footer">
+			<section class="container footer_center">
+				<section class="row">
+					<article class="span4" style="margin-top: -10px;">
+						<figure style="margin-bottom: -5px;"><a href="http://www.continuum.io" title="Continuum Analytics"><img src="/img/footer_logo.png" alt="Continuum Analytics" width="134" height="64" class="footer_logo"/></a></figure>
+						3801 Capital of Texas Highway South<br/>
+						Suite 250<br/>
+						Austin, TX 78704<br/>
+						<br/>
+						512.222.5440<br/>
+						<a class="footer_links" href="mailto:&#x69;&#x6e;&#102;&#x6f;&#00064;&#x63;&#000111;&#110;&#x74;&#x69;&#x6e;&#x75;&#x75;&#000109;&#x2e;&#105;&#111;">&#x69;&#x6e;&#102;&#x6f;&#00064;&#x63;&#000111;&#110;&#x74;&#x69;&#x6e;&#x75;&#x75;&#000109;&#x2e;&#105;&#111;</a><br/>
+						<section class="footer_social_media">
+                            <a href="http://plus.google.com/108011804375544975017" title="Circle Continuum Analytics on Google+" target="_blank"><img src="/img/gplus_header.png" alt="Circle Continuum Analytics on Google+" width="33" height="33"></a>
+                            <a href="http://www.twitter.com/continuumio" title="Follow @continuumio on Twitter" target="_blank"><img src="/img/twitter_header.png" alt="Follow @continuumio on Twitter" width="33" height="33"></a>
+                            <a href="http://www.linkedin.com/company/continuum-analytics-inc-" title="Follow Continuum Analytics on LinkedIn" target="_blank"><img src="/img/linkedin_header.png" alt="Follow Continuum Analytics on LinkedIn" width="33" height="33"></a>
+                            <a href="http://www.facebook.com/ContinuumAnalytics" title="Like Continuum Analytics on Facebook" target="_blank"><img src="/img/facebook_header.png" alt="Like Continuum Analytics on Facebook" width="33" height="33"></a>
+                            <!--<a href="http://www.youtube.com/user/ContinuumIO" title="Check out Continuum's support videos on YouTube" target="_blank"><img src="/img/youtube_header.png" alt="Check out Continuum's support videos on YouTube" width="33" height="33"></a>-->
+						</section>
+                    </article>
+                    <article class="span2 footer_align_left">
+						<b><a href="/python-for-big-data.html" title="Products" class="footer_links">Products</a></b><br/>
+						<a href="/python-for-big-data.html" title="Python for Big Data" class="footer_links">Python for Big Data</a><br/>
+						<a href="/anaconda.html" title="Anaconda" class="footer_links">Anaconda</a><br/>
+						<!--<a href="/blaze.html" title="Blaze" class="footer_links">Blaze</a><br/>
+						<a href="/excel-plug-in.html" title="Excel Plug-in" class="footer_links">Excel Plug-in</a><br/>-->
+						<a href="/downloads.html" title="Downloads" class="footer_links">Downloads</a><br/>
+						<br/>
+						<b><a href="consulting.html" title="Solutions" class="footer_links">Consulting</a></b><br/>
+						<br/>
+						<b><a href="/training.html" title="Training" class="footer_links">Training</a></b><br/>
+						<!--<a href="/course-descriptions.html" title="Courses" class="footer_links">Courses</a><br/>
+						<a href="/calendar.html" title="Calendar" class="footer_links">Calendar</a><br/>-->
+						<br/>
+						<b><a href="/support.html" title="Support" class="footer_links">Support</a></b><br/>
+					</article>
+                    <article class="span1 footer_align_left">
+						<!--<b><a href="/index.php/blog" title="Expertise" class="footer_links">Expertise</a></b><br/>-->				
+						<b><a href="/developer-resources.html" title="Developer Resources" class="footer_links">Developers</a></b><br/>
+						<br/>
+						<b><a href="/about-continuum.html" title="Company" class="footer_links">Company</a></b><br/>
+						<a href="/our-team.html" title="Our Team" class="footer_links">Our Team</a><br/>
+						<a href="/careers.html" title="Careers" class="footer_links">Careers</a><br/>
+						<a href="/index.php/blog" title="Blog" class="footer_links">Blog</a><br/>
+						<a href="/press/index.php" title="Press Releases" class="footer_links">Press</a><br/>
+						<a href="http://www.numfocus.org" title="NumFocus" class="footer_links">NumFocus</a><br/>
+						<br/>
+						<b><a href="/support.html" title="Contact Us" class="footer_links">Contact</a></b>
+					</article>
+					<article class="span4">
+                    	<section class="footer_twitter"><a href="http://www.twitter.com/continuumio" class="footer_links" target="_blank">Follow us on Twitter!</a></section>
+                   		<section id="jstwitter"></section>
+						<section class="footer_copyright">&copy; 2012 Continuum Analytics</section>
+					</article>
+				</section>
+			</section>
+		</footer>			<script src="/js/jquery.js"></script>
+		<script src="/js/bootstrap.js"></script>
+		<script src="/js/prettify.js"></script>
+        <script src="/js/twitter.js"></script>
+        <script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-27761864-1']);
+		  _gaq.push(['_trackPageview']);
+		
+		  (function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script><!-- /footer -->
+</body>
+</html>
+<!-- This Quick Cache file was built for (  continuum.io/blog/mapreduce/ ) in 0.18095 seconds, on Jul 25th, 2012 at 2:22 pm UTC. -->
+<!-- This Quick Cache file will automatically expire ( and be re-built automatically ) on Jul 25th, 2012 at 3:22 pm UTC -->

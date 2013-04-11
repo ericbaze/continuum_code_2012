@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Download Anaconda Community Edition - Continuum Analytics</title>
+        <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+		<!--#include file="head.inc" -->
+        <style>
+			.content, .content_center { background-image: none; background-color: #FFFFFF; }
+			.form_standard { background: url(img/inner_form_background.png); }
+			.blog_title { margin-bottom: 20px; }
+			.blog_content { margin-bottom: 20px; }
+			p { margin-right: 20px; }
+		</style>
+	</head>
+	<body>
+		<!--#include file="header.inc" -->
+        <section class="content">
+            <section class="container content_center">
+                <article class="container">
+                    <section class="row blog_content">
+                    	<section class="span12">
+                       	  <h2 class="blog_title">Download the Anaconda Community Edition</h2>              
+                            <p><b>This <em>beta</em> release of the Anaconda Community Edition aggregation is licensed with a BSD license.</b><br/>
+                            The following 64-bit installation packages of Anaconda Community Edition v.0.8.3 are now available.       
+                            <table class="table table-bordered table-striped">
+                           		<tr>
+									<th width="33%"><h3>Linux</h3></th>
+                                    <th width="33%"><h3>VMWare</h3></th>
+                                    <th width="33%"><h3>Amazon AWS</h3></th>
+                                </tr>
+                                <tr>
+                           	  <td><a class="btn btn-large btn-primary" href="http://c391790.r90.cf1.rackcdn.com/anaconda-0.8.3.tar.bz2">Download</a><br/>
+                                       <br/>anaconda-0.8.3.tar.bz2<br/>
+									Size: 192 MB<br/>
+									MD5: d78fc011d442ec7bd1570142d1276a89<br/><br/>
+                                    <strong>Anaconda Community Edition v0.8.3</strong> has been tested on the following Linux distributions:<br/><br/>
+                                    <ul>
+                                        <li>Centos 5,6</li>
+                                        <li>RHEL 5,6</li>
+                                        <li>Fedora Core 16</li>
+                                        <li>Ubuntu 11, 12</li>
+                                        <li>OpenSUSE 12</li>
+                                    </ul>
+                                       </td>
+                                    <td><a class="btn btn-large btn-primary" href="http://c391790.r90.cf1.rackcdn.com/anaconda-0.8.3-vm.tar.bz2">Download for Linux &amp; Mac OSX</a><br/><br/>
+									anaconda-0.8.3-vm.tar.bz2<br/>
+                                    Size: 690 MB<br/>
+									MD5: d58d349071dc1c7b902b3017bfdb3318
+									<br/><br/><a class="btn btn-large btn-primary" href="http://c391790.r90.cf1.rackcdn.com/anaconda-0.8.3-vm.zip">Download for Windows</a><br/><br/>
+                                    anaconda-0.8.3-vm.zip<br/>
+									Size: 741 MB<br/>
+									MD5: afbc3a81e3edb760d505c5ff5c2fea9a<br/></td>
+                                  <td><div class="btn btn-large btn-disabled" href="">Launch the AMI</div><br/><br/>
+                                    <em>A direct link to the Anaconda AMI  should be available soon. In the interm, follow the instructions below to launch the AMI instance.</em>
+                                    </td>
+                                <tr>
+                                	<th colspan="3">Installation</th>
+                                </tr>
+                                <tr>
+                                	<td>
+                                    	<strong>Anaconda Install Instructions</strong><br/><br/>
+										<ol>
+                                        	<li>After downloading the Anaconda tarball, run the following command from a terminal:<br/>
+                                        	<pre class="prettyprint">tar xpojf anaconda-0.8.3.tar.bz2 -C/opt</pre>
+                                        	This will extract all necessary files into the prefix /opt/anaconda.<br/><br/>
+											<em>You might have to run the above command as root if you do not have permission to write into the /opt directory.</em>
+											</li><br/>
+                                            <li>After the extraction is finished, you should add the the anaconda binary directory to your PATH environment variable:<br/>
+                                        <pre class="prettyprint">export PATH=/opt/anaconda/bin:"$PATH"</pre>
+                                        You may wish to add the above line to your ~/.bashrc file.
+                                        </li>
+										</ol> 
+                                        <br/>                            
+                                        <strong>Disco Installation Instructions</strong><br/><br/>
+                                    	<ol>
+                                        	<li>After downloading the Anaconda tarball, run the following command from a terminal:
+                                        	<br/>
+                                        	<pre class="prettyprint"> tar xpojf anaconda-0.8.3.tar.bz2 -C /opt</pre>
+                                            </li>
+                                       		<li>Create a Disco user:<br/>
+                                        	<pre class="prettyprint"> /opt/anaconda/etc/disco/create-disco-user.sh</pre>
+                                        	</li>
+                                            <li>Add the Anaconda directory to the .bashrc file:<br/>
+                                        	<pre class="prettyprint"> vim /opt/anaconda/var/disco/.bashrc<br/>export PATH=/opt/anaconda/bin:$PATH</pre>
+                                        	</li>
+                                            <li>Change ownership of .bashrc file:<br/>
+											<pre class="prettyprint"> chown disco:disco /opt/anaconda/var/disco/.bashrc</pre>
+                                    		</li>
+                                            <li>Change permissions on Disco account:<br/>
+                                            <pre class="prettyprint"> chmod go-w ~disco</pre>
+											</li>
+                                            <li>Create .ssh directory for Disco keys and set permissions:<br/>
+                                        	<pre class="prettyprint"> mkdir /opt/anaconda/var/disco/.ssh<br/>
+											 chmod go-rwx /opt/anaconda/var/disco/.ssh<br/>
+											 chown disco:disco /opt/anaconda/var/disco/.ssh</pre> 
+                                            </li>
+                                            <li>Start the Disco service<br/>
+											<pre class="prettyprint"> /opt/anaconda/etc/init.d/disco start</pre>
+                                            </li>
+                                    	</ol>
+                                    </td>
+                                    <td rowspan="3"><ol><li>Download VM image.</li><br/>
+                                    	<li><strong>For Linux or Mac OSX:</strong>
+                                            <pre class="prettyprint">tar xjf anaconda-0.8.3-vm.tar.bz2</pre>
+                                            <strong>For Windows:</strong><pre class="prettyprint">unzip anaconda-0.8.3-vm.zip</pre>
+                                        </li>
+                                        <li>VMWare Fusion:  Click File->Open.</li><br/>
+                                        <li>Select the anaconda-0.8.3 file.</li><br/>
+                                        <li>Power on the VM.</li><br/>
+                                        <li>If a dialog box appears asking if it was copied or moved, click "I copied it."</li><br/>
+                                        <li><strong>Login</strong><br/><pre class="prettyprint">user: anaconda<br/>password: anaconda</pre></li>
+                                        <li><strong>Start disco:</strong><br/><pre class="prettyprint">/opt/anaconda/etc/init.d/disco start</pre></li>
+                                    </ol>
+                                    </td>
+                                    <td rowspan="3">
+                                    	<ol>
+                                        	<li><a href="http://aws.amazon.com" title="Log into the AWS" target="_blank">Log in to AWS.</a></li><br/>
+                                        	<li>Go to EC2 Dashboard.</li><br/>
+                                        	<li>Click Launch Instance.</li><br/>
+                                        	<li>Select Classic Wizard then click Continue.</li><br/>
+                                        	<li>Select Community AMIs tab.</li><br/>
+                                        	<li>Search for "ami-39298750", then click Select.</li><br/>
+                                        	<li>Continue with remaining AMI launch steps.</li><br/>
+                                        </ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                	<th>Uninstalling Anaconda</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p> As all of Anaconda is contained in a single directory, uninstalling Anaconda is simple:
+                                        <br/>
+                                        <pre class="prettyprint">rm -rf /opt/anaconda</pre>
+                                        <em>Reminder: you may need root permissions to execute the above command.</em>
+                                        </p>
+                                    </td>
+                                </tr>
+                          </table>
+                        </section>
+                    </section>
+                </article>
+            </section>
+        </section>
+		<!--#include file="footer.inc" -->
+		<!--#include file="scripts.inc" -->
+        <!-- begin olark code --><script data-cfasync="false" type='text/javascript'>/*{literal}<![CDATA[*/
+window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){f[z]=function(){(a.s=a.s||[]).push(arguments)};var a=f[z]._={},q=c.methods.length;while(q--){(function(n){f[z][n]=function(){f[z]("call",n,arguments)}})(c.methods[q])}a.l=c.loader;a.i=nt;a.p={0:+new Date};a.P=function(u){a.p[u]=new Date-a.p[0]};function s(){a.P(r);f[z](r)}f.addEventListener?f.addEventListener(r,s,false):f.attachEvent("on"+r,s);var ld=function(){function p(hd){hd="head";return["<",hd,"></",hd,"><",i,' onl' + 'oad="var d=',g,";d.getElementsByTagName('head')[0].",j,"(d.",h,"('script')).",k,"='",l,"//",a.l,"'",'"',"></",i,">"].join("")}var i="body",m=d[i];if(!m){return setTimeout(ld,100)}a.P(1);var j="appendChild",h="createElement",k="src",n=d[h]("div"),v=n[j](d[h](z)),b=d[h]("iframe"),g="document",e="domain",o;n.style.display="none";m.insertBefore(n,m.firstChild).id=z;b.frameBorder="0";b.id=z+"-loader";if(/MSIE[ ]+6/.test(navigator.userAgent)){b.src="javascript:false"}b.allowTransparency="true";v[j](b);try{b.contentWindow[g].open()}catch(w){c[e]=d[e];o="javascript:var d="+g+".open();d.domain='"+d.domain+"';";b[k]=o+"void(0);"}try{var t=b.contentWindow[g];t.write(p());t.close()}catch(x){b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
+/* custom configuration goes here (www.olark.com/documentation) */
+olark.identify('8646-991-10-6415');/*]]>{/literal}*/</script><noscript><a href="https://www.olark.com/site/8646-991-10-6415/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript><!-- end olark code -->
+	</body>
+</html>

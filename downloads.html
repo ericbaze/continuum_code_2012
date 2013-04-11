@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Download Anaconda Community Edition - Continuum Analytics</title>
+        <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+		<!--#include file="head.inc" -->
+        <style>
+			.content, .content_center { background-image: none; background-color: #FFFFFF; }
+			.form_standard { background: url(img/inner_form_background.png); }
+			.blog_title { margin-bottom: 20px; }
+			.blog_content { margin-bottom: 20px; }
+			p { margin-right: 20px; }
+		</style>
+	</head>
+	<body>
+		<!--#include file="header.inc" -->
+        <section class="content">
+            <section class="container content_center">
+                <article class="container">
+                    <section class="row blog_content">
+                    	<section class="span8">
+                       	  <h2 class="blog_title">Downloads</h2>
+                          <table class="table table-bordered table-striped">
+                              <tbody>
+                                <tr>
+                                  <th colspan="4"><h3>Select Your Product</h3></th>
+                                </tr>
+                                <tr>
+                                	<td><h4>Anaconda Pro</h4><br/>
+                                   	<ul>
+                                    	<li>NumbaPro and IOPro are included</li>
+                                    	<li>Linux, Windows and Mac OS X</li>
+										<li>64-bit and 32-bit</li>
+										<li>Python 2.7 (Coming Soon: Python 2.6)</li>
+                                    </ul>
+                                    </td>
+                                	<td><h4>Anaconda CE</h4><br/>
+                                    <ul>
+                                    	<li>Linux, Windows and Mac OS X</li>
+										<li>64-bit and 32-bit</li>
+										<li>Python 2.7</li>
+                                    </ul>
+                                    </td>
+								</tr>
+                                <tr>
+                                  <td><a class="btn btn-primary" href="#anaconda_pro" data-toggle="modal" title="Anaconda Pro Trial">Download the Trial</a></td>
+                                  <td><a class="btn btn-primary" href="#anaconda_ce" data-toggle="modal" title="Anaconda CE">Download</a></td>
+                                </tr> 
+                                <tr>
+                                	<td><h4>IOPro</h4><br/>
+                                    <ul>
+                                    	<li>Linux, Windows and Mac OS X</li>
+										<li>64-bit and 32-bit</li>
+										<li>Python 2.6 and 2.7</li>
+                                    </ul>
+                                    </td>
+                                	<td><h4>Numba Pro</h4><br/>
+                                   	<ul>
+                                    	<li>Linux, Windows and Mac OS X</li>
+										<li>64-bit and 32-bit</li>
+										<li>Python 2.7</li>
+                                    </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                  <td><a class="btn btn-primary" href="#iopro" data-toggle="modal" title="IOPro Trial">Download the Trial</a></td>
+                                  <td><a class="btn btn-primary" href="#numbapro" data-toggle="modal" title="Numba Pro Trial">Download the Trial</a></td>
+                                </tr>
+                            	</tbody>
+                            </table>
+                          
+                                <div class="modal hide freesubmit" id="anaconda_ce">
+                                  <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">×</button>
+                                    <h3>Free Download</h3>
+                                    <div class="formerror"></div>
+                                  </div>
+                                  <div class="modal-body">
+                                    <form class="freeform" method="POST" action="https://store.continuum.io/cshop/free/3"/>
+                                    <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='KcC5oK99IGZglQ01IyMFwvBPm7pdQm86' /></div>
+                                      <label>E-Mail</label>
+                                      <input required='required' class="emailinput" type="text" name="email" value=""/>      
+                                      <br/>
+                                      <br/>
+                                      <input type="checkbox" name="mailinglist" checked="checked" />&nbsp;&nbsp;Yes, keep me up to date with the latest news and information about Continuum's products and services.
+                                      <br/>
+                                      <br/>
+                                      <button class="freesubmitbutton btn btn-primary btn-large">Submit</button>
+                                    </form>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <a href="#" class="btn" data-dismiss="modal">Close</a>
+                                  </div>
+                                </div>
+                                
+                                <div class="modal hide trialsubmit" id="anaconda_pro">
+                                  <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">×</button>
+                                    <h3>Trial Download</h3>
+                                    <div class="formerror"></div>    
+                                  </div>
+                                  <div class="modal-body">
+                                    <form class="trialform" method="POST" action="https://store.continuum.io/cshop/trial/3"/>
+                                    <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='KcC5oK99IGZglQ01IyMFwvBPm7pdQm86' /></div>
+                                      <label>E-Mail</label>
+                                      <input required='required' class="emailinput" type="text" name="email" value=""/>      
+                                      <label>Name</label>
+                                      <input required='required' class="nameinput" type="text" name="name" value=""/>
+                                      <label>Company</label>
+                                      <input required='required' class="companyinput" type="text" name="company" value=""/>
+                                      <label>Position (optional)</label>
+                                      <input type="text" name="position" value=""/>
+                                      <label>Phone number (optional)</label>
+                                      <input type="text" name="phonenumber" value=""/>
+                                      <br/>
+                                      <br/>
+                                      <input type="checkbox" name="mailinglist" checked="checked" />&nbsp;&nbsp;Yes, keep me up to date with the latest news and information about Continuum's products and services.
+                                      <br/>
+                                      <br/>
+                                      <br>
+                                      <button class="trialsubmitbutton btn btn-primary btn-large">Submit</button>
+                                    </form>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <a href="#" class="btn" data-dismiss="modal">Close</a>
+                                  </div>
+								</div>
+                                
+                                <div class="modal hide trialsubmit" id="iopro">
+                                  <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">×</button>
+                                    <h3>Trial Download</h3>
+                                    <div class="formerror"></div>    
+                                  </div>
+                                  <div class="modal-body">
+                                    <form class="trialform" method="POST" action="https://store.continuum.io/cshop/trial/1"/>
+                                    <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='KcC5oK99IGZglQ01IyMFwvBPm7pdQm86' /></div>
+                                      <label>E-Mail</label>
+                                      <input required='required' class="emailinput" type="text" name="email" value=""/>      
+                                      <label>Name</label>
+                                      <input required='required' class="nameinput" type="text" name="name" value=""/>
+                                      <label>Company</label>
+                                      <input required='required' class="companyinput" type="text" name="company" value=""/>
+                                      <label>Position (optional)</label>
+                                      <input type="text" name="position" value=""/>
+                                      <label>Phone number (optional)</label>
+                                      <input type="text" name="phonenumber" value=""/>
+                                      <br/>
+                                      <br/>
+                                      <input type="checkbox" name="mailinglist" checked="checked" />&nbsp;&nbsp;Yes, keep me up to date with the latest news and information about Continuum's products and services.
+                                      <br/>
+                                      <br/>
+                                      <br>
+                                      <button class="trialsubmitbutton btn btn-primary btn-large">Submit</button>
+                                    </form>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <a href="#" class="btn" data-dismiss="modal">Close</a>
+                                  </div>
+								</div>
+                                
+                                <div class="modal hide trialsubmit" id="numbapro">
+                                  <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">×</button>
+                                    <h3>Trial Download</h3>
+                                    <div class="formerror"></div>    
+                                  </div>
+                                  <div class="modal-body">
+                                    <form class="trialform" method="POST" action="https://store.continuum.io/cshop/trial/2"/>
+                                    <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='KcC5oK99IGZglQ01IyMFwvBPm7pdQm86' /></div>
+                                      <label>E-Mail</label>
+                                      <input required='required' class="emailinput" type="text" name="email" value=""/>      
+                                      <label>Name</label>
+                                      <input required='required' class="nameinput" type="text" name="name" value=""/>
+                                      <label>Company</label>
+                                      <input required='required' class="companyinput" type="text" name="company" value=""/>
+                                      <label>Position (optional)</label>
+                                      <input type="text" name="position" value=""/>
+                                      <label>Phone number (optional)</label>
+                                      <input type="text" name="phonenumber" value=""/>
+                                      <br/>
+                                      <br/>
+                                      <input type="checkbox" name="mailinglist" checked="checked" />&nbsp;&nbsp;Yes, keep me up to date with the latest news and information about Continuum's products and services.
+                                      <br/>
+                                      <br/>
+                                      <br>
+                                      <button class="trialsubmitbutton btn btn-primary btn-large">Submit</button>
+                                    </form>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <a href="#" class="btn" data-dismiss="modal">Close</a>
+                                  </div>
+								</div>
+
+                        </section>
+                        <section class="span4">
+                        <br/>
+                        <br/>
+                        <br/>
+                        <table class="table table-bordered table-striped">
+  <tbody>
+  <tr>
+      <th colspan="3"><h3>Compare Anaconda Editions</h3></th>
+    </tr>
+    <tr>
+      <th>Included</th>
+       <th>Pro</th>
+      <th>CE</th>
+    </tr>
+    </tr>
+        <tr>
+      <td><a href="http://docs.continuum.io/anaconda/launcher.html" target="_blank" title="Enhanced web-based interface">Enhanced web-based interface</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+        </tr>
+        <tr>
+      <td>Extensive scientific packages</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+        <tr>
+      <td>Multiplatform support</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td><a href="numbapro" title="Numba Pro">Numba Pro</a></td>
+      <td>Yes</td>    
+      <td>No</td>
+    </tr>
+    <tr>
+      <td><a href="iopro" title="IOPro">IOPro</a></td>
+      <td>Yes</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td><a href="http://wise.io/wiserf.html" title="WiseRF" target="_blank">WiseRF</a></td>
+      <td>Yes</td>
+      <td>No</td>
+    </tr>
+    </tbody></table>
+                        </section>
+                    </section>
+                </article>
+            </section>
+        </section>
+		<!--#include file="footer.inc" -->
+		<!--#include file="scripts.inc" -->
+
+        <!-- begin olark code --><script data-cfasync="false" type='text/javascript'>/*{literal}<![CDATA[*/
+window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){f[z]=function(){(a.s=a.s||[]).push(arguments)};var a=f[z]._={},q=c.methods.length;while(q--){(function(n){f[z][n]=function(){f[z]("call",n,arguments)}})(c.methods[q])}a.l=c.loader;a.i=nt;a.p={0:+new Date};a.P=function(u){a.p[u]=new Date-a.p[0]};function s(){a.P(r);f[z](r)}f.addEventListener?f.addEventListener(r,s,false):f.attachEvent("on"+r,s);var ld=function(){function p(hd){hd="head";return["<",hd,"></",hd,"><",i,' onl' + 'oad="var d=',g,";d.getElementsByTagName('head')[0].",j,"(d.",h,"('script')).",k,"='",l,"//",a.l,"'",'"',"></",i,">"].join("")}var i="body",m=d[i];if(!m){return setTimeout(ld,100)}a.P(1);var j="appendChild",h="createElement",k="src",n=d[h]("div"),v=n[j](d[h](z)),b=d[h]("iframe"),g="document",e="domain",o;n.style.display="none";m.insertBefore(n,m.firstChild).id=z;b.frameBorder="0";b.id=z+"-loader";if(/MSIE[ ]+6/.test(navigator.userAgent)){b.src="javascript:false"}b.allowTransparency="true";v[j](b);try{b.contentWindow[g].open()}catch(w){c[e]=d[e];o="javascript:var d="+g+".open();d.domain='"+d.domain+"';";b[k]=o+"void(0);"}try{var t=b.contentWindow[g];t.write(p());t.close()}catch(x){b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
+/* custom configuration goes here (www.olark.com/documentation) */
+olark.identify('8646-991-10-6415');/*]]>{/literal}*/</script><noscript><a href="https://www.olark.com/site/8646-991-10-6415/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript><!-- end olark code -->
+	</body>
+</html>

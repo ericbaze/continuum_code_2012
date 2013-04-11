@@ -1,0 +1,120 @@
+/*
+Plugin Name: Easy WP
+Plugin URI: http://www.easy-wp.com
+Description: Easy WP transforms wordpress into a super-simple CMS;
+Version: 2.0
+Author: Luc Princen
+Author URI: http://www.to-wonder.com
+Contributors: Motief:Collectief (http://www.motiefcollectief.com)
+*/
+
+/*
+	BUTTON-OF-GOD style:
+*/
+#site-heading{display:none}
+#header-logo{display:none}
+#easy-wp-logo{position:absolute;top:3px;left:3px;}
+#user_info{display:none;}
+#wp-admin-bar-new-content{display:none;}
+#wp-admin-bar-comments{display:none;}
+#favorite-actions{display:none;}
+#wpadminbar{display:none;}
+#favorite-actions-new{
+	/*display:none;*/
+	position:absolute;
+	top:5px;
+	right:20px;
+	width:auto;
+	cursor:hand;
+	cursor:pointer;
+}
+#favorite-actions-new img{margin-left:12px;}
+
+
+#favorite-actions-new:hover #fav-link{
+	color:#D54E21;
+}
+
+.favorite-first{	
+	padding-left:5px;
+	padding-right:10px;
+	height:20px;
+}
+
+.fav-img{
+	display:block;
+	margin-right:10px;
+	padding-bottom:0px;
+	height:16px;
+	padding-top:3px;
+	display:inline;
+}
+
+#fav-link{
+	display:block;
+	margin-left:35px;
+	margin-top:-19px;
+	padding-bottom:3px;
+	color:#21759B;
+}
+
+#footer{margin:0px 10px 0px 10px !important}
+
+/*
+	LOADING style:
+*/
+
+#easy-wp-loader{
+	width:250px;
+	height:150px;
+	background-color:#ffffff;
+	box-shadow: 0px 1px 10px 0px #bfbfbf; -webkit-box-shadow: 0px 1px 10px 0px #bfbfbf; -moz-box-shadow: 0px 1px 10px 0px #bfbfbf;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-top:-125px;
+	margin-left:-125px;
+	z-index:999;
+	text-align:center;
+}
+
+#easy-wp-loader img{
+	margin-top:10px;
+}
+
+#easy-wp-loader h1{
+	font-size:24px;
+	text-shadow:0 1px 5px rgba(0,0,0,0.25);
+	color:#222;
+	text-transform:uppercase;
+	text-align:center;
+	width:100%;
+	margin-bottom:20px;
+	margin-top:5px;
+}
+
+#easy-wp-loader p{
+	font-size:12px;
+	text-shadow:0 1px 5px rgba(0,0,0,0.25);
+	color:#222;
+	width:100%;
+	text-align:center;
+}
+
+/*
+	Trashcan style:
+*/
+
+#droppable{
+	width:81px;
+	height:107px;
+	position:absolute;
+	bottom:50px;
+	right:20px;
+	background-image:url('../img/droppable.jpg');
+	z-index:900;
+}
+
+.draggable{
+	z-index:999;
+}
